@@ -35,6 +35,13 @@ Version: 1.0.0
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
 h1 {
     font-family: 'Space Mono', sans-serif;
     font-weight: 700;
@@ -153,9 +160,6 @@ p {
 
 
 /* The Modal (background) */
-
-
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -171,19 +175,14 @@ p {
 
 /* Modal Content/Box */
 .modal-content {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
 }
 
 .close:hover,
@@ -193,34 +192,85 @@ p {
     cursor: pointer;
 }
 
-
+/* Formulaire */
+.label {
+    font-family: Poppins;
+    font-weight: 500;
+}
+.wpcf7-form-control-wrap input, textarea
+ {
+    border-radius: 8px !important;
+    border: 1px solid #B8BBC2 !important;
+    margin-bottom: 15px !important;
+}
+.submitbtn {
+    width: 100%;
+    background-color:#D8D8D8 !important;
+    border-radius: 8px !important;
+    border: 1px solid #B8BBC2 !important;
+    color:black !important;
+    font-family: space-mono !important;
+    font-weight: 400;
+}
+.submitbtn:hover {
+    background-color: #fefefe !important;
+    border: 1px solid #000000 !important;
+}
 /* Styles généraux pour tous les écrans */
 
 
 /* Petits appareils (téléphones en mode portrait, largeur max de 480px) */
 
 /* Cacher le menu principal sur les petits écrans */
-@media only screen and (max-width: 768px) {
-    .main-menu-class {
-        display: none; /* Masquer le menu principal */
+
+
+@media only screen and (max-width: 604px) {
+    .modal-content {
+        display: block;
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
     }
-    
-    .menu-button-container {
-        display: flex; /* Afficher le bouton de menu */
-    }
-    
-    .primary-menu-container {
-        display: none; /* Assurer que le menu est caché par défaut */
-    }
-    
-    .primary-menu-container.active {
-        display: block; /* Afficher le menu lorsqu'il est actif */
-    }
+
+
+        .main-menu-class {
+            display: none; /* Masquer le menu principal */
+        }
+        
+        .menu-button-container {
+            display: flex !important; /* Afficher le bouton de menu */
+        }
+        
+        .primary-menu-container {
+            display: none; /* Assurer que le menu est caché par défaut */
+        }
+        
+        .primary-menu-container.active {
+            display: block; /* Afficher le menu lorsqu'il est actif */
+        }
+   
 }
 
 /* Optionnel : cacher le bouton de menu sur les grands écrans */
-@media only screen and (min-width: 769px) {
+@media only screen and (max-width: 800px) {
+    .site-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
     .menu-button-container {
         display: none; /* Cacher le bouton de menu sur les grands écrans */
+    }
+    .logo {
+        margin-top: 10px;
+    }
+    .footer-navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
     }
 }

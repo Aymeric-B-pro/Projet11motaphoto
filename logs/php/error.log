@@ -24,3 +24,15 @@ Stack trace:
 #7 D:\localsites\motaphoto\app\public\index.php(17): require('D:\\localsites\\m...')
 #8 {main}
   thrown in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone\inc\template-functions.php on line 198
+[20-Sep-2024 15:02:06 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php:38
+Stack trace:
+#0 D:\localsites\motaphoto\app\public\wp-includes\template.php(810): require_once()
+#1 D:\localsites\motaphoto\app\public\wp-includes\template.php(745): load_template('D:\\localsites\\m...', true, Array)
+#2 D:\localsites\motaphoto\app\public\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#3 D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\index.php(45): get_footer()
+#4 D:\localsites\motaphoto\app\public\wp-includes\template-loader.php(106): include('D:\\localsites\\m...')
+#5 D:\localsites\motaphoto\app\public\wp-blog-header.php(19): require_once('D:\\localsites\\m...')
+#6 D:\localsites\motaphoto\app\public\index.php(17): require('D:\\localsites\\m...')
+#7 {main}
+  thrown in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 38
+[23-Sep-2024 12:23:57 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\header.php on line 71

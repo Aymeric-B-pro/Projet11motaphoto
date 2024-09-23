@@ -37,19 +37,38 @@
                 <?php the_custom_logo(); ?>
             </a>
         </div>
-        
-        <!-- Menu principal ajouté ici -->
-        <nav class="main-navigation">
-            <?php
-            wp_nav_menu( array(
-                'theme_location' => 'main-menu', // Affiche le menu enregistré sous 'main-menu'
-                'menu_class'     => 'main-menu-class', // Classe CSS pour styliser le menu
-                'container'      => false, // Désactiver le conteneur par défaut
-            ) );
-            ?>
-        </nav>
-    </header>
 
-    <div id="content" class="site-content">
-        <div id="primary" class="content-area">
-            <main id="main" class="site-main">
+    <div class="site-header">
+        <?php if ( has_nav_menu( 'main-menu' ) ) : ?>
+            <nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Navigation principale', 'twentytwentyonechild' ); ?>">
+                <div class="menu-button-container">
+                    <button id="primary-mobile-menu" class="button" aria-controls="main-menu-list" aria-expanded="false">
+                        <span class="dropdown-icon open">
+                            <?php esc_html_e( 'Menu', 'twentytwentyonechild' ); ?>
+                            <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); ?>
+                        </span>
+                        <span class="dropdown-icon close">
+                            <?php esc_html_e( 'Fermer', 'twentytwentyonechild' ); ?>
+                            <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'close' ); ?>
+                        </span>
+                    </button><!-- #primary-mobile-menu -->
+                </div><!-- .menu-button-container -->
+
+                <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'main-menu', 
+                    'menu_class'     => 'main-menu-class', 
+                    'container'      => false, 
+                    'items_wrap'     => '<ul id="main-menu-list" class="%2$s">%3$s</ul>',
+                    'fallback_cb'    => false,
+                ));
+                ?>
+            </nav><!-- #site-navigation -->
+        <?php endif; ?>
+    </div>
+    <!-- Fermeture correcte du header -->
+</header>
+
+<div id="content" class="site-content"> 
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
