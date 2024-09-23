@@ -31,7 +31,7 @@
     </a>
 
     <!-- Conteneur pour le logo et le menu -->
-    <header class="site-header">
+<header class="site-header">
         <div class="logo">
             <a href="<?php echo home_url(); ?>">
                 <?php the_custom_logo(); ?>

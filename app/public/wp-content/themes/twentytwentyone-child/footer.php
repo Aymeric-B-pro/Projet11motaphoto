@@ -34,6 +34,7 @@
                 );
                 ?>
             </ul><!-- .footer-navigation-wrapper -->
+            <?php get_template_part('template/modal-contact'); ?>
         </nav><!-- .footer-navigation -->
     <?php else : ?>
         <p style="color: red;">No footer menu assigned</p>
