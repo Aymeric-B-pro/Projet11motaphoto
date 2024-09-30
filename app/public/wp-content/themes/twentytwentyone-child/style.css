@@ -82,7 +82,8 @@ p {
 /* Style du logo */
 .logo a img {
     width: 216px;
-    height: auto; /* Ajuste la hauteur proportionnellement */
+    height: auto;
+    padding-bottom: 5px;
 }
 
 /* Style du menu principal */
@@ -171,11 +172,19 @@ p {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: fadeInBackground 0.5s forwards;
+}
+
+/* Animation pour faire apparaître le fond de la modale */
+@keyframes fadeInBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Modal Content/Box */
 .modal-content {
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
     background-color: #fefefe;
@@ -183,6 +192,47 @@ p {
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    transform: translateX(100%); /* Départ hors de l'écran */
+    opacity: 0;
+    animation: slideIn 0.7s forwards; /* Animation pour glisser la modale */
+}
+
+/* Animation pour faire glisser la modale depuis la droite */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Title inside the modal */
+.modal-title {
+    font-size: 48px;
+    line-height: 1;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    animation: scrollContact 60s linear infinite;
+}
+
+/* Animation du texte qui défile en continue */
+@keyframes scrollContact {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* Wrapper for the modal title to limit its width */
+.modal-title-wrapper {
+    width: 100%; /* Adapte à la largeur de la modale */
+    overflow: hidden; /* Cache tout ce qui dépasse de cette zone */
+    margin-bottom: 30px;
 }
 
 .close:hover,
@@ -192,11 +242,15 @@ p {
     cursor: pointer;
 }
 
+
+
+
 /* Formulaire */
 .label {
     font-family: Poppins;
     font-weight: 500;
 }
+
 .wpcf7-form-control-wrap input, textarea
  {
     border-radius: 8px !important;
@@ -216,42 +270,9 @@ p {
     background-color: #fefefe !important;
     border: 1px solid #000000 !important;
 }
+
+
 /* Styles généraux pour tous les écrans */
-
-
-/* Petits appareils (téléphones en mode portrait, largeur max de 480px) */
-
-/* Cacher le menu principal sur les petits écrans */
-
-
-@media only screen and (max-width: 604px) {
-    .modal-content {
-        display: block;
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-    }
-
-
-        .main-menu-class {
-            display: none; /* Masquer le menu principal */
-        }
-        
-        .menu-button-container {
-            display: flex !important; /* Afficher le bouton de menu */
-        }
-        
-        .primary-menu-container {
-            display: none; /* Assurer que le menu est caché par défaut */
-        }
-        
-        .primary-menu-container.active {
-            display: block; /* Afficher le menu lorsqu'il est actif */
-        }
-   
-}
 
 /* Optionnel : cacher le bouton de menu sur les grands écrans */
 @media only screen and (max-width: 800px) {
@@ -264,13 +285,76 @@ p {
     .menu-button-container {
         display: none; /* Cacher le bouton de menu sur les grands écrans */
     }
-    .logo {
-        margin-top: 10px;
-    }
     .footer-navigation {
         display: flex;
         justify-content: center;
         align-items: center;
         height: auto;
+    }
+    .primary-navigation {
+    margin: auto;
+    }
+}
+
+
+/* Cacher le menu principal sur les petits écrans */
+@media only screen and (max-width: 696px) {
+    .main-menu-class {
+    justify-content: center;
+    }
+    .site-header {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 604px) {
+    .modal-content {
+        display: block;
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+        .main-menu-class {
+            display: none; /* Masquer le menu principal */
+        }
+        
+        .menu-button-container {
+            display: flex !important; /* Afficher le bouton de menu */
+            padding: 0 30px 0 0 !important;
+            position: fixed !important;
+        }
+        
+        .primary-menu-container {
+            display: none; /* Assurer que le menu est caché par défaut */
+        }
+        
+        .primary-menu-container.active {
+            display: block; /* Afficher le menu lorsqu'il est actif */
+            background-color: #E00000;
+        }
+    .primary-navigation {
+        position: static;
+    }
+    .site-header {
+        justify-content: space-between;
+        align-items: normal !important;
+    }
+    .logo a img{
+        padding: 0px !important;
+    }
+}
+
+/* Petits appareils (téléphones en mode portrait, largeur max de 480px) */
+@media only screen and (max-width: 481px) {
+    .site-header {
+        justify-content: flex-start !important;
+        align-items: normal !important;
+        margin: 0 15px !important;
+    }
+    .menu-button-container {
+        padding: 0px !important;
     }
 }

@@ -31,28 +31,29 @@
     </a>
 
     <!-- Conteneur pour le logo et le menu -->
-<header class="site-header">
+<header>
+    <div class="site-header">
         <div class="logo">
-            <a href="<?php echo home_url(); ?>">
-                <?php the_custom_logo(); ?>
-            </a>
+                <a href="<?php echo home_url(); ?>">
+                    <?php the_custom_logo(); ?>
+                </a>
         </div>
 
-    <div class="site-header">
-        <?php if ( has_nav_menu( 'main-menu' ) ) : ?>
-            <nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Navigation principale', 'twentytwentyonechild' ); ?>">
-                <div class="menu-button-container">
-                    <button id="primary-mobile-menu" class="button" aria-controls="main-menu-list" aria-expanded="false">
-                        <span class="dropdown-icon open">
-                            <?php esc_html_e( 'Menu', 'twentytwentyonechild' ); ?>
-                            <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); ?>
-                        </span>
-                        <span class="dropdown-icon close">
-                            <?php esc_html_e( 'Fermer', 'twentytwentyonechild' ); ?>
-                            <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'close' ); ?>
-                        </span>
-                    </button><!-- #primary-mobile-menu -->
-                </div><!-- .menu-button-container -->
+                
+        <?php if ( has_nav_menu( 'primary' ) ) : ?>
+        <nav id="site-navigation" class="primary-navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
+            <div class="menu-button-container">
+                <button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
+                    <span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
+                        <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+                    </span>
+                    <span class="dropdown-icon close"><?php esc_html_e( 'Close', 'twentytwentyone' ); ?>
+                        <?php echo twenty_twenty_one_get_icon_svg( 'ui', 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+                    </span>
+                </button><!-- #primary-mobile-menu -->
+            </div>
+                
+                <!-- .menu-button-container -->
 
                 <?php
                 wp_nav_menu( array(
