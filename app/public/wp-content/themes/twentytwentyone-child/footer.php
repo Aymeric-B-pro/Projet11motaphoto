@@ -43,7 +43,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<?php get_template_part('template/modal-contact'); ?>
+<?php get_template_part('template_parts/modal-contact'); ?>
 </body>
 </html>
 

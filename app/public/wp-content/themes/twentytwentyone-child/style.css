@@ -185,16 +185,16 @@ p {
 .modal-content {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    justify-content: center; 
+    align-items: center; 
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; 
     transform: translateX(100%); /* Départ hors de l'écran */
     opacity: 0;
-    animation: slideIn 0.7s forwards; /* Animation pour glisser la modale */
+    animation: slideIn 0.7s forwards;
 }
 
 /* Animation pour faire glisser la modale depuis la droite */
@@ -209,7 +209,6 @@ p {
     }
 }
 
-/* Title inside the modal */
 .modal-title {
     font-size: 48px;
     line-height: 1;
@@ -229,10 +228,10 @@ p {
         transform: translateX(-50%);
     }
 }
-/* Wrapper for the modal title to limit its width */
+
 .modal-title-wrapper {
-    width: 100%; /* Adapte à la largeur de la modale */
-    overflow: hidden; /* Cache tout ce qui dépasse de cette zone */
+    width: 100%; 
+    overflow: hidden;
     margin-bottom: 30px;
 }
 
@@ -242,8 +241,6 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
-
-
 
 
 /* Formulaire */
@@ -272,23 +269,34 @@ p {
     border: 1px solid #000000 !important;
 }
 
-/* SIngle-photo CSS */
+/* -- SIngle-photo CSS -- */
 
 /* Container global */
 .single-photo-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
+    padding: 40px;
 }
 
-/* Bloc gauche (infos) */
+/* Bloc gauche infos */
 .left-info-block {
-    width: 48%; /* 50% moins un petit espace */
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 48%;
+    padding: 20px 0;
+    border-bottom: 1px solid;
 }
 
-/* Bloc droit (photo) */
+.left-info-block p, h2, a{
+    font-family: 'Space Mono', monospace !important;
+    font-weight: 400;
+    text-decoration: none !important;
+    text-transform: uppercase; /* Tout en majuscules */
+}
+
+/* Bloc droit photo */
 .right-photo-block {
     width: 48%;
     display: flex;
@@ -298,30 +306,83 @@ p {
 
 .right-photo-block img {
     max-width: 100%;
-    height: auto; /* Garde le ratio de l'image */
+    height: auto;
 }
 
-/* Bloc pour les interactions (en dessous) */
-.bottom-interactions-block {
-    width: 100%;
-    height: 118px;
+/* -- Bloc du milieu -- */
+.bottom-interactions-block p {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+}
+.bottom-interactions-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    height: 118px;
+    padding: 0 15px;
 }
 
-.contact-link a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #0073aa;
+/* Colonne molieu gauche */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
 }
 
-.navigation-links a {
-    text-decoration: none;
-    font-size: 16px;
-    margin-left: 20px;
+.contact-left .contact-link a {
+    display: block;
+    width: 272px;
+    height: 50px;
+    padding: 8px 15px;
+    border-radius: 2px 0 0 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.9;
 }
+
+/* Colonne milieu droite */
+
+.navigation-links {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-end; 
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    margin-right: 0; 
+}
+
+.nav-link {
+    position: relative;
+    font-size: 35px; /* Taille des flèches */
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    display: inline-block;
+}
+
+.nav-preview {
+    display: none;
+    position: absolute;
+    bottom: 60px; /* Place la miniature au-dessus des flèches */
+    left: 50%;
+    transform: translateX(-50%); /* Centre la miniature par rapport aux flèches */
+    width: 150px; /* Taille de la miniature */
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    z-index: 1;
+    pointer-events: none; /* Pour éviter que le survol interfère */
+}
+
+.nav-link:hover .nav-preview {
+    display: block;
+}
+
 
 
 
@@ -365,10 +426,10 @@ p {
     .modal-content {
         display: block;
         background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
+        margin: 15% auto; 
         padding: 20px;
         border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
+        width: 80%; 
     }
 
         .main-menu-class {
