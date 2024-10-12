@@ -304,22 +304,35 @@ p {
     align-items: center;
 }
 
+.right-photo-block p{
+    font-weight: 300;
+}
+
 .right-photo-block img {
     max-width: 100%;
     height: auto;
 }
 
 /* -- Bloc du milieu -- */
-.bottom-interactions-block p {
-    font-family: 'Space Mono', monospace;
-    font-weight: 400;
+
+.middle-box {
+    height: 118px;
+    display: flex; 
+    align-items: center; 
+    width: 100%;
 }
+
+.bottom-interactions-block p {
+    font-weight: 300;
+    font-size: 12px;
+}
+
 .bottom-interactions-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 118px;
-    padding: 0 15px;
+    width: 50%; /* Ajuste la largeur du premier bloc pour qu'il prenne la moitié */
+    height: 100%; /* Prend toute la hauteur disponible */
 }
 
 /* Colonne molieu gauche */
@@ -327,32 +340,30 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    height: 100%;
+    height: 100%; /* Prend toute la hauteur */
 }
 
-.contact-left .contact-link a {
+.contact-link a {
     display: block;
     width: 272px;
     height: 50px;
     padding: 8px 15px;
     border-radius: 2px 0 0 0;
+    background-color: #D8D8D8;
     text-align: center;
-    background-color: #000;
-    color: #fff;
-    opacity: 0.9;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 34px;
 }
 
 /* Colonne milieu droite */
 
 .navigation-links {
     display: flex;
-    justify-content: flex-end; 
-    align-items: flex-end; 
-    position: relative;
-    width: 100%; 
-    height: 100%; 
-    margin-right: 0; 
+    justify-content: flex-end;
+    align-items: center; /* Centre verticalement les flèches */
+    width: 50%; /* Largeur de 50% pour la partie droite */
+    height: 100%; /* Prend toute la hauteur disponible */
 }
 
 .nav-link {
@@ -364,21 +375,33 @@ p {
     display: inline-block;
 }
 
+/* Miniatures des liens */
+.navigation-links {
+    position: relative;
+    height: 100%; 
+    display: flex;
+    justify-content: flex-end; /* Aligne les flèches à droite */
+    align-items: flex-end; /* Aligne les flèches en bas */
+    overflow: hidden; /* Empêche le débordement des miniatures */
+}
+
+/* Miniature des images en carré */
 .nav-preview {
     display: none;
     position: absolute;
-    bottom: 60px; /* Place la miniature au-dessus des flèches */
-    left: 50%;
+    bottom: 50px; /* Miniature apparaît au-dessus des flèches */
+    left: 50%; 
     transform: translateX(-50%); /* Centre la miniature par rapport aux flèches */
-    width: 150px; /* Taille de la miniature */
-    height: 100px;
-    background-size: cover;
-    background-position: center;
+    width: 81px !important; /* Largeur fixe de la miniature (carré) */
+    height: 71px !important; /* Hauteur fixe de la miniature (carré) */
+    background-size: cover; /* L'image couvre toute la zone sans distorsion */
+    background-position: center; /* Centre l'image dans le cadre */
     border: 1px solid #ccc;
     z-index: 1;
     pointer-events: none; /* Pour éviter que le survol interfère */
 }
 
+/* Affichage de la miniature au survol */
 .nav-link:hover .nav-preview {
     display: block;
 }

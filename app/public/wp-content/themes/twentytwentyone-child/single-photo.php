@@ -33,23 +33,25 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </div>
 
     <!-- Bloc du milieu -->
-    <div class="bottom-interactions-container">
-        <div class="contact-left">
-            <p>Cette photo vous intéresse ?</p>
+     <div class=middle-box>
+        <div class="bottom-interactions-container">
+            <div class="contact-left">
+                <p>Cette photo vous intéresse ?</p>
+            </div>
+            <div class="contact-link">
+                    <a href="#openModal" class="contactlink">CONTACT</a>
+            </div>
         </div>
-        <div class="contact-link">
-                <a href="#openModal" class="contactlink">CONTACT</a>
+        <div class="navigation-links">
+            <a href="<?php echo get_permalink(get_previous_post()); ?>" class="nav-link prev-link">
+                &larr;
+                <span class="nav-preview" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_previous_post(), 'thumbnail'); ?>');"></span>
+            </a>
+            <a href="<?php echo get_permalink(get_next_post()); ?>" class="nav-link next-link">
+                &rarr;
+                <span class="nav-preview" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_next_post(), 'thumbnail'); ?>');"></span>
+            </a>
         </div>
-    </div>
-    <div class="navigation-links">
-        <a href="<?php echo get_permalink(get_previous_post()); ?>" class="nav-link prev-link">
-            &larr;
-            <span class="nav-preview" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_previous_post(), 'thumbnail'); ?>');"></span>
-        </a>
-        <a href="<?php echo get_permalink(get_next_post()); ?>" class="nav-link next-link">
-            &rarr;
-            <span class="nav-preview" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_next_post(), 'thumbnail'); ?>');"></span>
-        </a>
     </div>
 
 </div>
