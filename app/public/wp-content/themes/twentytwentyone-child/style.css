@@ -8,7 +8,7 @@ Template: twentytwentyone
 Version: 1.0.0
 */
 
-/* Fonts : */
+/* --- Fonts --- */
 @font-face {
     font-family: 'Space Mono';
     src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
@@ -65,9 +65,7 @@ p {
     font-weight: 300;
 }
 
-/* Style de page */
-
-
+/* --- Style de page --- */
 /* Style du header */
 .site-header {
     display: flex;
@@ -89,7 +87,7 @@ p {
 /* Style du menu principal */
 .main-navigation {
     flex-grow: 1;
-    text-align: right; /* Aligne le menu à droite */
+    text-align: right;
 }
 
 .main-menu-class {
@@ -97,7 +95,7 @@ p {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Positionne les liens vers la droite */
+    justify-content: flex-end;
 }
 
 .main-menu-class li {
@@ -129,8 +127,8 @@ p {
 /* Centre le menu horizontalement et ajuste les marges */
 .footer-navigation {
     display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center;
+    align-items: center;
     height: 100%;
     padding: 0;
     margin: 0 !important;
@@ -138,7 +136,7 @@ p {
 }
 
 .footer-navigation-wrapper {
-    list-style: none; /* Supprime les puces de la liste */
+    list-style: none;
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -150,28 +148,28 @@ p {
 }
 
 .footer-navigation-wrapper a {
-    text-decoration: none !important; /* Supprime le soulignement des liens */
+    text-decoration: none !important;
     font-family: 'Space Mono', monospace;
     font-size: 16px;
     font-weight: 400;
     line-height: 23.7px;
     padding: 0;
-    color: #000; /* Couleur du texte */
+    color: #000;
 }
 
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
     animation: fadeInBackground 0.5s forwards;
 }
 
@@ -192,7 +190,7 @@ p {
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
-    transform: translateX(100%); /* Départ hors de l'écran */
+    transform: translateX(100%);
     opacity: 0;
     animation: slideIn 0.7s forwards;
 }
@@ -269,8 +267,7 @@ p {
     border: 1px solid #000000 !important;
 }
 
-/* -- SIngle-photo CSS -- */
-
+/* --- SIngle-photo CSS --- */
 /* Container global */
 .single-photo-container {
     display: flex;
@@ -284,27 +281,43 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 48%;
+    width: 50%;
     padding: 20px 0;
     border-bottom: 1px solid;
 }
 
-.left-info-block p, h2, a{
+.left-info-block h2 {
+    font-size: 66px;
     font-family: 'Space Mono', monospace !important;
     font-weight: 400;
-    text-decoration: none !important;
     text-transform: uppercase; /* Tout en majuscules */
+    margin-bottom: 15px;
+}
+
+.left-info-block p {
+    font-family: 'Space Mono', monospace !important;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.left-info-block a {
+    text-decoration: none !important;
+    font-family: 'Space Mono', monospace !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 /* Bloc droit photo */
 .right-photo-block {
-    width: 48%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.right-photo-block p{
+.right-photo-block p {
     font-weight: 300;
 }
 
@@ -313,13 +326,15 @@ p {
     height: auto;
 }
 
-/* -- Bloc du milieu -- */
 
+/* -- Bloc du milieu -- */
 .middle-box {
-    height: 118px;
+    height: 108px;
+    margin-top: 10px;
     display: flex; 
     align-items: center; 
     width: 100%;
+    border-bottom: 1px solid;
 }
 
 .bottom-interactions-block p {
@@ -331,8 +346,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%; /* Ajuste la largeur du premier bloc pour qu'il prenne la moitié */
-    height: 100%; /* Prend toute la hauteur disponible */
+    width: 50%;
+    height: 100%;
 }
 
 /* Colonne molieu gauche */
@@ -340,7 +355,8 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%; /* Prend toute la hauteur */
+    height: 100%;
+    font-size: 14px;
 }
 
 .contact-link a {
@@ -354,63 +370,134 @@ p {
     font-weight: 400;
     font-size: 12px;
     line-height: 34px;
+    text-decoration: none !important;
 }
 
 /* Colonne milieu droite */
-
 .navigation-links {
     display: flex;
     justify-content: flex-end;
-    align-items: center; /* Centre verticalement les flèches */
-    width: 50%; /* Largeur de 50% pour la partie droite */
-    height: 100%; /* Prend toute la hauteur disponible */
+    align-items: flex-end; /* Alignement au bas des éléments */
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Style général des liens de navigation */
 .nav-link {
     position: relative;
-    font-size: 35px; /* Taille des flèches */
+    font-size: 40px; /* Taille des flèches */
     text-decoration: none;
     color: #000;
-    padding: 10px;
     display: inline-block;
+    text-decoration: none;
 }
 
-/* Miniatures des liens */
-.navigation-links {
-    position: relative;
-    height: 100%; 
-    display: flex;
-    justify-content: flex-end; /* Aligne les flèches à droite */
-    align-items: flex-end; /* Aligne les flèches en bas */
-    overflow: hidden; /* Empêche le débordement des miniatures */
-}
-
-/* Miniature des images en carré */
+/* Style général des miniatures */
 .nav-preview {
     display: none;
     position: absolute;
-    bottom: 50px; /* Miniature apparaît au-dessus des flèches */
-    left: 50%; 
-    transform: translateX(-50%); /* Centre la miniature par rapport aux flèches */
-    width: 81px !important; /* Largeur fixe de la miniature (carré) */
-    height: 71px !important; /* Hauteur fixe de la miniature (carré) */
-    background-size: cover; /* L'image couvre toute la zone sans distorsion */
-    background-position: center; /* Centre l'image dans le cadre */
+    width: 81px; /* Taille carrée de la miniature */
+    height: 71px;
+    background-size: cover;
+    background-position: center;
     border: 1px solid #ccc;
     z-index: 1;
-    pointer-events: none; /* Pour éviter que le survol interfère */
+    pointer-events: none;
+}
+
+/* Miniature pour le lien précédent */
+.prev-preview {
+    bottom: 50px; /* Miniature apparaît au-dessus de la flèche */
+}
+
+/* Miniature pour le lien suivant */
+.next-preview {
+    bottom: 50px; /* Miniature apparaît au-dessus de la flèche */
+    transform: translateX(-50%); /* Centrée par rapport à la flèche */
 }
 
 /* Affichage de la miniature au survol */
-.nav-link:hover .nav-preview {
+.prev-link:hover .prev-preview,
+.next-link:hover .next-preview {
     display: block;
 }
 
+/* Bottom box-photos apparentées */
+.bottom-box {
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.bottom-box h3 {
+    font-family: 'Space Mono', monospace !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.same-style-photo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.related-photo-block {
+    flex: 1 1 calc(50% - 10px);
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 495px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.related-photo-block img {
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
 
 
+.photo-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.photo-block:hover .photo-icons {
+    display: flex;
+    gap: 10px; /* Espace entre les icônes */
+}
+
+.icon-eye, .icon-fullscreen {
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.icon-eye:hover, .icon-fullscreen:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 
 /* Styles généraux pour tous les écrans */
+/* Très grand écran */
+@media only screen and (max-width:1475px) {
+    .right-photo-block {
+        width: 48%;
+    }
+}
 
 /* Optionnel : cacher le bouton de menu sur les grands écrans */
 @media only screen and (max-width: 800px) {
@@ -430,8 +517,35 @@ p {
         height: auto;
     }
     .primary-navigation {
-    margin: auto;
+        margin: auto;
     }
+
+    .bottom-box h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .same-style-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .related-photo-block {
+        flex: 1 1 100%;
+        height: 278.8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .related-photo-block img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
 }
 
 
@@ -444,6 +558,7 @@ p {
         flex-direction: row;
     }
 }
+
 
 @media only screen and (max-width: 604px) {
     .modal-content {

@@ -44,11 +44,9 @@ jQuery(document).ready(function($) {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionne le bouton ou l'élément qui déclenche l'appel AJAX
     document.querySelector('#ajax_call').addEventListener('click', function() {
         let formData = new FormData();
-        formData.append('action', 'request_photos'); // Utilise l'action définie dans functions.php
-
+        formData.append('action', 'request_photos');
         // Exécute l'appel AJAX
         fetch(child_style_js.ajax_url, {
             method: 'POST',
@@ -60,13 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             return response.json();
         }).then(function(data) {
-            // Assure-toi que data est un tableau d'objets contenant les informations de tes photos
             data.forEach(function(photo) {
                 // Insère chaque photo avec un élément <img>
                 document.querySelector('#ajax_return').insertAdjacentHTML('beforeend', 
                     '<div class="col-12 mb-5">' + 
                     '<img src="' + photo.guid + '" alt="' + photo.post_title + '" />' + 
-                    '<h3>' + photo.post_title + '</h3>' + // Si tu souhaites afficher le titre
+                    '<h3>' + photo.post_title + '</h3>' +
                     '</div>'
                 );
             });
@@ -75,3 +72,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+//Récupération Ref Photo
+jQuery(document).ready(function($) {
+    $('.contactlink').on('click', function(event) {
+        event.preventDefault(); // Empêche le comportement par défaut de l'ancre
+        var refPhoto = $(this).data('ref-photo');
+        $('input[name="your-subject"]').val(refPhoto);
+        $('#myModal').fadeIn();
+    });
+
+    $('.close-button').on('click', function() {
+        $('#myModal').fadeOut();
+    });
+
+    $(window).on('click', function(event) {
+        if ($(event.target).is('#myModal')) {
+            $('#myModal').fadeOut();
+        }
+    });
+});
+
