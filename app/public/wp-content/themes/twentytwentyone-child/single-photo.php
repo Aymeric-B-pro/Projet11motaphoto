@@ -15,23 +15,23 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
     <div class="single-photo-container">
+        <div class="bloc-top" >
+            <!-- Bloc de gauche -->
+            <div class="left-info-block">
+                <h2><?php the_title(); ?></h2>
+                <p>REFERENCE : <?php the_field('reference');?></p>
+                <p>CATEGORIE : <?php the_terms($post->ID, 'categorie');?></p>
+                <p>FORMAT : <?php the_terms($post->ID, 'format');?></p>
+                <p>ANNÉE : <?php echo get_the_date();?></p>
+            </div>
 
-        <!-- Bloc de gauche -->
-        <div class="left-info-block">
-            <h2><?php the_title(); ?></h2>
-            <p>REFERENCE : <?php the_field('reference');?></p>
-            <p>CATEGORIE : <?php the_terms($post->ID, 'categorie');?></p>
-            <p>FORMAT : <?php the_terms($post->ID, 'format');?></p>
-            <p>ANNÉE : <?php echo get_the_date();?></p>
+            <!-- Bloc de droite -->
+            <div class="right-photo-block">
+                <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="photo-fullsize-link">
+                    <?php the_post_thumbnail('large'); ?>
+                </a>
+            </div>
         </div>
-
-        <!-- Bloc de droite -->
-        <div class="right-photo-block">
-            <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="photo-fullsize-link">
-                <?php the_post_thumbnail('large'); ?>
-            </a>
-        </div>
-
         <!-- Bloc du milieu -->
         <div class=middle-box>
             <div class="bottom-interactions-container">
@@ -76,7 +76,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <span class="nav-preview next-preview" style="background-image: url('<?php echo get_the_post_thumbnail_url($next_post, 'thumbnail'); ?>');"></span>
             </a>
         </div>
-        </div>
+    </div>
         <!--- Bloc du bas -->
     <div class="bottom-box">
         <h3>Vous aimerez aussi</h3>

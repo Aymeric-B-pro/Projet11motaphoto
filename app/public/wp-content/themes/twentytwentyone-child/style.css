@@ -269,11 +269,22 @@ p {
 
 /* --- SIngle-photo CSS --- */
 /* Container global */
+
 .single-photo-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px;
+    width: 100%;
+}
+
+.bloc-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    gap: 20px;
 }
 
 /* Bloc gauche infos */
@@ -281,33 +292,26 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 50%;
+    flex-basis: 50%;
+    flex-grow: 1;
     padding: 20px 0;
     border-bottom: 1px solid;
 }
 
+.left-info-block h2, .left-info-block p, .left-info-block a {
+    font-family: 'Space Mono', monospace !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
 .left-info-block h2 {
     font-size: 66px;
-    font-family: 'Space Mono', monospace !important;
-    font-weight: 400;
-    text-transform: uppercase; /* Tout en majuscules */
-    margin-bottom: 15px;
 }
 
-.left-info-block p {
-    font-family: 'Space Mono', monospace !important;
-    font-weight: 400;
+.left-info-block p, .left-info-block a {
     font-size: 14px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.left-info-block a {
-    text-decoration: none !important;
-    font-family: 'Space Mono', monospace !important;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 15px;
 }
 
 /* Bloc droit photo */
@@ -315,25 +319,25 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.right-photo-block p {
-    font-weight: 300;
+    flex-basis: 50%;
+    flex-grow: 1;
 }
 
 .right-photo-block img {
     max-width: 100%;
     height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 
 /* -- Bloc du milieu -- */
 .middle-box {
     height: 108px;
-    margin-top: 10px;
     display: flex; 
     align-items: center; 
     width: 100%;
+    gap: 20px;
     border-bottom: 1px solid;
 }
 
@@ -377,7 +381,7 @@ p {
 .navigation-links {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end; /* Alignement au bas des éléments */
+    align-items: flex-end;
     width: 50%;
     height: 100%;
     position: relative;
@@ -387,8 +391,7 @@ p {
 /* Style général des liens de navigation */
 .nav-link {
     position: relative;
-    font-size: 40px; /* Taille des flèches */
-    text-decoration: none;
+    font-size: 40px;
     color: #000;
     display: inline-block;
     text-decoration: none;
@@ -398,7 +401,7 @@ p {
 .nav-preview {
     display: none;
     position: absolute;
-    width: 81px; /* Taille carrée de la miniature */
+    width: 81px;
     height: 71px;
     background-size: cover;
     background-position: center;
@@ -429,7 +432,7 @@ p {
     display: flex; 
     flex-direction: column;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .bottom-box h3 {
@@ -437,17 +440,23 @@ p {
     font-weight: 400;
     text-transform: uppercase;
     font-size: 18px;
+    margin-bottom: 20px;
 }
+
 
 .same-style-photo {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+
+
 .related-photo-block {
-    flex: 1 1 calc(50% - 10px);
+    flex: 1 1 calc(50% - 20px);
     margin-bottom: 20px;
     overflow: hidden;
     position: relative;
@@ -455,14 +464,16 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
+
 .related-photo-block img {
+    width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
 }
-
 
 .photo-icons {
     position: absolute;
@@ -474,7 +485,7 @@ p {
 
 .photo-block:hover .photo-icons {
     display: flex;
-    gap: 10px; /* Espace entre les icônes */
+    gap: 10px;
 }
 
 .icon-eye, .icon-fullscreen {
@@ -494,13 +505,47 @@ p {
 /* Styles généraux pour tous les écrans */
 /* Très grand écran */
 @media only screen and (max-width:1475px) {
+
     .right-photo-block {
         width: 48%;
     }
+
 }
 
 /* Optionnel : cacher le bouton de menu sur les grands écrans */
 @media only screen and (max-width: 800px) {
+    .bloc-top {
+    flex-direction: column-reverse;
+    align-items: center;
+    }
+
+    .right-photo-block {
+        width: 100%; /* Prendre toute la largeur du conteneur sur les petits écrans */
+        flex-basis: 100%; /* Utiliser toute la largeur de la flexbox */
+    }
+
+    .right-photo-block img {
+        width: 100%; /* Forcer l'image à occuper toute la largeur disponible */
+        height: auto; /* Maintenir le ratio d'aspect de l'image */
+    }
+
+
+    .middle-box{
+        flex-direction: column;
+        margin: 0;
+        padding: 15px 0 !important;
+        border-top: 1px solid;
+    }
+
+    .bottom-interactions-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation-links {
+        display: none;
+    }
+
     .site-header {
         display: flex;
         justify-content: center;
@@ -508,7 +553,7 @@ p {
         height: auto;
     }
     .menu-button-container {
-        display: none; /* Cacher le bouton de menu sur les grands écrans */
+        display: none;
     }
     .footer-navigation {
         display: flex;
@@ -546,6 +591,11 @@ p {
         object-position: center;
     }
 
+    .left-info-block {
+        border-bottom: 0px;
+    }
+
+
 }
 
 
@@ -568,6 +618,19 @@ p {
         padding: 20px;
         border: 1px solid #888;
         width: 80%; 
+    }
+@media only screen and (max-width: 604px) {
+    .bloc-top img {
+        width: 100%;
+        object-fit: cover; /* Assure que l'image est bien ajustée */
+        object-position: center; /* Centrer l'image */
+    }
+}
+
+    .middle-box {
+        border-bottom: 1px solid;
+        height: 100%;
+        width: 100VW;
     }
 
         .main-menu-class {
@@ -610,4 +673,10 @@ p {
     .menu-button-container {
         padding: 0px !important;
     }
+
+
+    .middle-box {
+        padding: 15px 0 !important;
+    }
+
 }
