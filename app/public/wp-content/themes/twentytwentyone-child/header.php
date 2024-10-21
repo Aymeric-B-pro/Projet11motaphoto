@@ -39,7 +39,8 @@
                 </a>
         </div>
 
-                
+    <!-- Priorité du site header via div site-header, plus fort que juste la classe pour le css enfant, vérifier et corriger !!   -->
+      <!-- Il faut la même structure que le thème parent qui prend le fichier header ailleurs, la même chose dans le theme enfant ? Vérifier.   -->
         <?php if ( has_nav_menu( 'primary' ) ) : ?>
         <nav id="site-navigation" class="primary-navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
             <div class="menu-button-container">

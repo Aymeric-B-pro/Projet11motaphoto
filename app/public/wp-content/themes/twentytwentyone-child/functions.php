@@ -57,3 +57,29 @@ function get_random_photo_background() {
     }
 }
 
+function load_more_photos() {
+    $paged = isset($_POST['page']) ? intval($_POST['page']) : 1;
+
+    // Ajuste les arguments de la requête WP_Query pour paginer
+    $args = array(
+        'post_type' => 'photos',
+        'posts_per_page' => 8, // Nombre d'images par page
+        'paged' => $paged, // Numéro de la page à charger
+    );
+
+    $photos_query = new WP_Query($args);
+
+    if ($photos_query->have_posts()) :
+        while ($photos_query->have_posts()) : $photos_query->the_post();
+            get_template_part('template_parts/photo_block', null, array('photo_id' => get_the_ID()));
+        endwhile;
+        wp_reset_postdata();
+    else :
+        // Si aucune photo n'est trouvée
+        echo 0;
+    endif;
+
+    die(); // Fin de la requête AJAX
+}
+add_action('wp_ajax_load_more_photos', 'load_more_photos'); // Action AJAX pour utilisateurs connectés
+add_action('wp_ajax_nopriv_load_more_photos', 'load_more_photos'); // Action AJAX pour utilisateurs non-connectés

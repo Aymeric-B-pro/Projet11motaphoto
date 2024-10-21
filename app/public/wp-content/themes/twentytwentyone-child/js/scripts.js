@@ -43,32 +43,43 @@ jQuery(document).ready(function($) {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('#ajax_call').addEventListener('click', function() {
-        let formData = new FormData();
-        formData.append('action', 'request_photos');
-        // Exécute l'appel AJAX
-        fetch(child_style_js.ajax_url, {
-            method: 'POST',
-            body: formData,
-        }).then(function(response) {
-            if (!response.ok) {
-                throw new Error('Network response error.');
-            }
+jQuery(document).ready(function($) {
+    $('#load-more').on('click', function() {
+        let button = $(this); // Le bouton "Charger plus"
+        let page = button.data('page'); // Récupère la page actuelle
+        let ajaxUrl = button.data('url'); // L'URL AJAX
 
-            return response.json();
-        }).then(function(data) {
-            data.forEach(function(photo) {
-                // Insère chaque photo avec un élément <img>
-                document.querySelector('#ajax_return').insertAdjacentHTML('beforeend', 
-                    '<div class="col-12 mb-5">' + 
-                    '<img src="' + photo.guid + '" alt="' + photo.post_title + '" />' + 
-                    '<h3>' + photo.post_title + '</h3>' +
-                    '</div>'
-                );
-            });
-        }).catch(function(error) {
-            console.error('There was a problem with the fetch operation: ', error);
+        // Requête AJAX
+        $.ajax({
+            url: ajaxUrl, // URL vers admin-ajax.php
+            type: 'POST',
+            data: {
+                action: 'load_more_photos', // Action définie dans WordPress pour récupérer les photos
+                page: page, // Page actuelle
+            },
+            beforeSend: function() {
+                button.text('Chargement...'); // Indique que le chargement est en cours
+            },
+            success: function(response) {
+                if (response) {
+                    // Insérer les nouvelles photos avant le bouton
+                    $('#photo-gallery').append(response); 
+                    
+                    // Incrémente la page de 1 pour la prochaine requête
+                    button.data('page', page + 1);
+
+                    // Remettre le texte du bouton
+                    button.text('Charger plus');
+                } else {
+                    // Si plus d'images, désactiver le bouton
+                    button.text('Plus d\'images à charger');
+                    button.prop('disabled', true); // Désactive le bouton
+                }
+            },
+            error: function(error) {
+                console.log('Erreur AJAX:', error);
+                button.text('Erreur, réessayez');
+            }
         });
     });
 });
