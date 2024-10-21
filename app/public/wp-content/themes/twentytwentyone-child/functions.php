@@ -37,3 +37,23 @@ function motaphoto_request_photos() {
 
 add_action( 'wp_ajax_request_photos', 'motaphoto_request_photos' ); 
 add_action( 'wp_ajax_nopriv_request_photos', 'motaphoto_request_photos' );
+
+function get_random_photo_background() {
+    // Requête pour obtenir les photos de votre CPT "photos"
+    $args = array(
+        'post_type'      => 'photo', // Nom du Custom Post Type
+        'posts_per_page' => 1,        // On veut une seule photo aléatoire
+        'orderby'        => 'rand'    // Trier aléatoirement
+    );
+    
+    $random_photo = new WP_Query($args);
+
+    if ($random_photo->have_posts()) {
+        while ($random_photo->have_posts()) : $random_photo->the_post();
+            // Obtenir l'URL de l'image à la une
+            $photo_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+            return $photo_url;
+        endwhile;
+    }
+}
+

@@ -38,3 +38,24 @@ Stack trace:
 [23-Sep-2024 12:23:57 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\header.php on line 71
 [30-Sep-2024 05:15:01 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "post_type", expecting ")" in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 27
 [30-Sep-2024 05:15:01 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "post_type", expecting ")" in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 27
+[21-Oct-2024 07:50:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_random_photo_background() in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php:13
+Stack trace:
+#0 D:\localsites\motaphoto\app\public\wp-includes\template-loader.php(106): include()
+#1 D:\localsites\motaphoto\app\public\wp-blog-header.php(19): require_once('D:\\localsites\\m...')
+#2 D:\localsites\motaphoto\app\public\index.php(17): require('D:\\localsites\\m...')
+#3 {main}
+  thrown in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php on line 13
+[21-Oct-2024 07:52:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_random_photo_background() in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php:13
+Stack trace:
+#0 D:\localsites\motaphoto\app\public\wp-includes\template-loader.php(106): include()
+#1 D:\localsites\motaphoto\app\public\wp-blog-header.php(19): require_once('D:\\localsites\\m...')
+#2 D:\localsites\motaphoto\app\public\index.php(17): require('D:\\localsites\\m...')
+#3 {main}
+  thrown in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php on line 13
+[21-Oct-2024 07:53:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_random_photo_background() in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php:13
+Stack trace:
+#0 D:\localsites\motaphoto\app\public\wp-includes\template-loader.php(106): include()
+#1 D:\localsites\motaphoto\app\public\wp-blog-header.php(19): require_once('D:\\localsites\\m...')
+#2 D:\localsites\motaphoto\app\public\index.php(17): require('D:\\localsites\\m...')
+#3 {main}
+  thrown in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php on line 13
