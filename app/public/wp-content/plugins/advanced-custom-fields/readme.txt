@@ -4,7 +4,7 @@ Tags: acf, fields, custom fields, meta, scf
 Requires at least: 6.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 6.3.6.3
+Stable tag: 6.3.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,11 @@ Over 10 plus years of vibrant community contribution alongside an ongoing commit
 
 
 == Changelog ==
+= 6.3.9 =
+*Release Date 22nd October 2024*
+
+* Version update release
+
 = 6.3.6.3 =
 *Release Date 15th October 2024*
 

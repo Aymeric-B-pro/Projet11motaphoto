@@ -24,62 +24,32 @@ document.addEventListener('DOMContentLoaded', function() {
 } )
 
 jQuery(document).ready(function($) {
-    $.ajax({
-        url: child_style_js.ajax_url, // Utilisation de l'URL injectée par wp_localize_script
-        method: 'POST',
-        data: {
-            action: 'request_photos'
-        },
-        success: function(response) {
-            if (response) {
-                console.log('Photos:', response);
-            } else {
-                console.log('Aucune photo trouvée');
-            }
-        },
-        error: function(error) {
-            console.log('Erreur AJAX', error);
-        }
-    });
-});
-
-jQuery(document).ready(function($) {
     $('#load-more').on('click', function() {
-        let button = $(this); // Le bouton "Charger plus"
-        let page = button.data('page'); // Récupère la page actuelle
-        let ajaxUrl = button.data('url'); // L'URL AJAX
+        let button = $(this);
+        let page = button.data('page');
+        let ajaxUrl = button.data('url');
 
-        // Requête AJAX
         $.ajax({
-            url: ajaxUrl, // URL vers admin-ajax.php
+            url: ajaxUrl,
             type: 'POST',
             data: {
-                action: 'load_more_photos', // Action définie dans WordPress pour récupérer les photos
-                page: page, // Page actuelle
-            },
-            beforeSend: function() {
-                button.text('Chargement...'); // Indique que le chargement est en cours
+                page: page + 1,
+                action: 'load_more_photos'
             },
             success: function(response) {
-                if (response) {
-                    // Insérer les nouvelles photos avant le bouton
-                    $('#photo-gallery').append(response); 
-                    
-                    // Incrémente la page de 1 pour la prochaine requête
+                if (response.success) {
+                    $('.photo-grid').append(response.data.content); 
                     button.data('page', page + 1);
 
-                    // Remettre le texte du bouton
-                    button.text('Charger plus');
+                    // Vérifier si toutes les photos sont chargées
+                    if (response.data.photos_loaded >= response.data.total_photos) {
+                        button.hide();
+                    }
                 } else {
-                    // Si plus d'images, désactiver le bouton
-                    button.text('Plus d\'images à charger');
-                    button.prop('disabled', true); // Désactive le bouton
+                    console.log('Pas de nouvelles photos à afficher.');
+                    button.hide();
                 }
             },
-            error: function(error) {
-                console.log('Erreur AJAX:', error);
-                button.text('Erreur, réessayez');
-            }
         });
     });
 });

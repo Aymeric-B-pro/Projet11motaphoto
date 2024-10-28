@@ -12,7 +12,6 @@ get_header();
         </div>
     </section>
     <section class="photo-catalogue">
-        <h2>Catalogue de photos Test</h2>
         <div class="photo-grid">
             <?php
             // Requête pour obtenir les photos du CPT "photos"

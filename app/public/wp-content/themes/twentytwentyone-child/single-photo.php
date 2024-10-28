@@ -80,7 +80,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         <!--- Bloc du bas -->
     <div class="bottom-box">
         <h3>Vous aimerez aussi</h3>
-        <div class="same-style-photo">
+        <div class="photo-grid">
             <?php
             $terms = wp_get_post_terms(get_the_ID(), 'categorie');
             if (!empty($terms) && !is_wp_error($terms)) {

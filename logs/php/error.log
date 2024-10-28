@@ -59,3 +59,21 @@ Stack trace:
 #2 D:\localsites\motaphoto\app\public\index.php(17): require('D:\\localsites\\m...')
 #3 {main}
   thrown in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php on line 13
+[27-Oct-2024 08:50:51 UTC] PHP Fatal error:  Cannot redeclare load_more_photos() (previously declared in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php:24) in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 116
+[27-Oct-2024 08:50:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\localsites\motaphoto\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[27-Oct-2024 08:50:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\localsites\motaphoto\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[27-Oct-2024 08:52:04 UTC] PHP Fatal error:  Cannot redeclare load_more_photos() (previously declared in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php:24) in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 116
+[27-Oct-2024 08:52:26 UTC] PHP Fatal error:  Cannot redeclare load_more_photos() (previously declared in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php:24) in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 116
+[27-Oct-2024 08:52:26 UTC] PHP Fatal error:  Cannot redeclare load_more_photos() (previously declared in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php:24) in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 116
+[27-Oct-2024 08:53:00 UTC] PHP Fatal error:  Cannot redeclare load_more_photos() (previously declared in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php:24) in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 116
+[27-Oct-2024 09:09:13 UTC] PHP Fatal error:  Cannot redeclare theme_enqueue_styles() (previously declared in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php:6) in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 35
+[27-Oct-2024 09:22:29 UTC] PHP Fatal error:  Cannot redeclare load_more_photos() (previously declared in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php:22) in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 65
+[27-Oct-2024 09:22:29 UTC] PHP Fatal error:  Cannot redeclare load_more_photos() (previously declared in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php:22) in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 65
+[27-Oct-2024 09:22:29 UTC] PHP Fatal error:  Cannot redeclare load_more_photos() (previously declared in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php:22) in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 65
+[27-Oct-2024 09:29:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_random_photo_background() in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php:9
+Stack trace:
+#0 D:\localsites\motaphoto\app\public\wp-includes\template-loader.php(106): include()
+#1 D:\localsites\motaphoto\app\public\wp-blog-header.php(19): require_once('D:\\localsites\\m...')
+#2 D:\localsites\motaphoto\app\public\index.php(17): require('D:\\localsites\\m...')
+#3 {main}
+  thrown in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php on line 9
