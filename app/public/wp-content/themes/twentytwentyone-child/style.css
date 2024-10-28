@@ -471,6 +471,39 @@ p {
 }
 
 /* Catalogue Photo */
+.filter-container {
+    display: flex;                /* Utiliser Flexbox */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center;         /* Centrer les éléments verticalement */
+}
+/* Styles généraux pour chaque filtre */
+.filter-container select {
+    border: 1.3px solid #B8BBC2;
+    font-family: 'Space Mono', monospace;
+    width: 260px;
+    padding: 11px 18px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none !important;
+    transition: none;
+    border-radius: 8px;
+}
+
+
+/* Positionnement des filtres */
+.filter-container select#category-filter {
+    margin-right: auto;
+}
+
+.filter-container select#format-filter {
+    margin-left: 30px;
+}
+
+.filter-container select#date-order {
+    margin-left: auto;
+}
+
+
 .photo-catalogue {
     padding: 40px;
 }
@@ -632,10 +665,18 @@ p {
     }
 
     .photo-grid {
-        grid-template-columns: 1fr; /* 1 colonne sur mobile */
+        grid-template-columns: 1fr;
     }
 
+    .filter-container {
+        flex-direction: column; /* Passer en colonne sur mobile */
+        align-items: flex-start; /* Alignement à gauche */
+    }
 
+    .filter-container select {
+        width: 100%; /* Prendre toute la largeur disponible */
+        margin-bottom: 10px; /* Espacement entre les sélecteurs */
+    }
 }
 
 

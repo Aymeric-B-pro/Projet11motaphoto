@@ -12,6 +12,43 @@ get_header();
         </div>
     </section>
     <section class="photo-catalogue">
+        <div class="filter-container">
+            <div class="filter-group">
+                <select id="category-filter">
+                    <option value="">Catégories</option>
+                    <?php
+                    $categories = get_terms(array(
+                        'taxonomy' => 'categorie',
+                        'hide_empty' => true,
+                    ));
+
+                    foreach ($categories as $category) {
+                        echo '<option value="' . esc_attr($category->term_id) . '">' . esc_html($category->name) . '</option>';
+                    }
+                    ?>
+                </select>
+                <select id="format-filter">
+                    <option value="">Formats</option>
+                    <?php
+                    $formats = get_terms(array(
+                        'taxonomy' => 'format',
+                        'hide_empty' => true,
+                    ));
+
+                    foreach ($formats as $format) {
+                        echo '<option value="' . esc_attr($format->term_id) . '">' . esc_html($format->name) . '</option>';
+                    }
+                    ?>
+                </select>
+            </div>
+            <div class="filter-group">
+                <select id="date-order">
+                    <option value="">Trier par</option>
+                    <option value="DESC">à partir des plus récentes</option>
+                    <option value="ASC">à partir des plus anciennes</option>
+                </select>
+            </div>
+        </div>
         <div class="photo-grid">
             <?php
             // Requête pour obtenir les photos du CPT "photos"

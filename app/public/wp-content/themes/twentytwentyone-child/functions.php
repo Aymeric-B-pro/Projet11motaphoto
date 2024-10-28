@@ -96,4 +96,73 @@ function load_more_photos() {
 
 // Déclarations AJAX
 add_action('wp_ajax_load_more_photos', 'load_more_photos');
-add_action('wp_ajax_nopriv_load_more_photos', 'load_more_photos');
+
+
+function filter_photos() {
+    // Récupérer les paramètres des filtres transmis via AJAX
+    $category = isset($_POST['category']) ? intval($_POST['category']) : '';
+    $format = isset($_POST['format']) ? intval($_POST['format']) : '';
+    $date_order = isset($_POST['date_order']) ? sanitize_text_field($_POST['date_order']) : 'DESC';
+    $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
+
+    // Arguments de la requête principale
+    $args = array(
+        'post_type' => 'photo',
+        'posts_per_page' => 8, // Nombre de photos à charger par page
+        'paged' => $page,
+        'orderby' => 'date',
+        'order' => $date_order,
+    );
+
+    // Ajout des filtres de catégorie et de format si sélectionnés
+    if ($category) {
+        $args['tax_query'][] = array(
+            'taxonomy' => 'categorie',
+            'field'    => 'term_id',
+            'terms'    => $category,
+        );
+    }
+
+    if ($format) {
+        $args['tax_query'][] = array(
+            'taxonomy' => 'format',
+            'field'    => 'term_id',
+            'terms'    => $format,
+        );
+    }
+
+    // Exécuter la requête WP_Query avec les arguments filtrés
+    $photo_query = new WP_Query($args);
+
+    // Compter le nombre total de photos pour gérer le bouton "Load More"
+    $total_photos_query = new WP_Query(array(
+        'post_type' => 'photo',
+        'posts_per_page' => -1, // Récupère tous les posts pour compter le total
+        'tax_query' => $args['tax_query'] ?? [], // Applique les filtres
+    ));
+    $total_photos = $total_photos_query->found_posts;
+
+    // Récupération des résultats pour les photos
+    if ($photo_query->have_posts()) {
+        ob_start();
+        while ($photo_query->have_posts()) {
+            $photo_query->the_post();
+            // Chargement du template pour chaque photo (ajuste selon ton thème)
+            get_template_part('template_parts/photo_block', null, array('photo_id' => get_the_ID()));
+        }
+        $content = ob_get_clean();
+        wp_send_json_success(array(
+            'content' => $content,
+            'total_photos' => $total_photos,
+            'photos_loaded' => $page * 8 // Nombre de photos chargées jusqu'à présent
+        ));
+    } else {
+        wp_send_json_error('Aucune photo trouvée.');
+    }
+
+    wp_reset_postdata();
+    wp_die();
+}
+
+// Enregistrement des actions AJAX pour utilisateurs connectés et non connectés
+add_action('wp_ajax_filter_photos', 'filter_photos');
