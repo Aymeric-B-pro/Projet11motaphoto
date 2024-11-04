@@ -472,14 +472,15 @@ p {
 
 /* Catalogue Photo */
 .filter-container {
-    display: flex;                /* Utiliser Flexbox */
-    justify-content: space-between; /* Espacement entre les éléments */
-    align-items: center;         /* Centrer les éléments verticalement */
+    display: flex;                
+    justify-content: space-between; 
+    align-items: center;         
 }
 /* Styles généraux pour chaque filtre */
 .filter-container select {
     border: 1.3px solid #B8BBC2;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Ppppins', monospace;
+    font-weight: 500;
     width: 260px;
     padding: 11px 18px;
     font-size: 14px;
@@ -489,6 +490,61 @@ p {
     border-radius: 8px;
 }
 
+/* Style par défaut pour le conteneur des filtres */
+.filter-container select {
+    border: 1.3px solid #B8BBC2;
+    font-family: 'Space Mono', monospace;
+    width: 260px;
+    padding: 11px 18px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.3s ease;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+/* Masquer l'option par défaut dans la liste */
+.filter-container select option:first-child {
+    display: none;
+}
+
+/* Bordure et coins ajustés lors du focus  ATTENTION : pour mettre du rouge, il faut un code html div-spam et javascript, se rengseigner sur personnaliser selecter*/
+.filter-container select:focus {
+    border: 1.3px solid #215AFF;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* Style de base pour les options */
+.filter-container select option {
+    border: 1.3px solid #B8BBC2;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 8px 15px;
+    transition: background-color 0.4s ease;
+}
+
+/* Animation au survol en plusieurs étapes */
+.filter-container select option:hover {
+    background-color: #FFD6D6;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+/* Deuxième couleur après un bref délai */
+.filter-container select option:hover::after {
+    background-color: #FE5858;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease 0.3s;
+}
+
+/* Troisième couleur finale après un second délai */
+.filter-container select option:hover::before {
+    background-color: #E00000;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease 0.6s;
+}
 
 /* Positionnement des filtres */
 .filter-container select#category-filter {
@@ -570,11 +626,32 @@ p {
 /* Styles généraux pour tous les écrans */
 /* Très grand écran */
 @media only screen and (max-width:1475px) {
-
     .right-photo-block {
         width: 48%;
     }
+}
+@media only screen and (max-width:940px) {
+    .filter-container select#format-filter {
+        margin-left: 10px;
+    }
+}
 
+@media only screen and (max-width:910px) {
+
+    .filter-container {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .filter-container select {
+        display: block;
+        margin-bottom: 10px; 
+        width: 270px;
+    }
+
+    .filter-container select#format-filter {
+        margin-left: 0px;
+    }
 }
 
 /* Optionnel : cacher le bouton de menu sur les grands écrans */
@@ -585,13 +662,13 @@ p {
     }
 
     .right-photo-block {
-        width: 100%; /* Prendre toute la largeur du conteneur sur les petits écrans */
-        flex-basis: 100%; /* Utiliser toute la largeur de la flexbox */
+        width: 100%; 
+        flex-basis: 100%; 
     }
 
     .right-photo-block img {
-        width: 100%; /* Forcer l'image à occuper toute la largeur disponible */
-        height: auto; /* Maintenir le ratio d'aspect de l'image */
+        width: 100%; 
+        height: auto; 
     }
 
 
@@ -667,16 +744,6 @@ p {
     .photo-grid {
         grid-template-columns: 1fr;
     }
-
-    .filter-container {
-        flex-direction: column; /* Passer en colonne sur mobile */
-        align-items: flex-start; /* Alignement à gauche */
-    }
-
-    .filter-container select {
-        width: 100%; /* Prendre toute la largeur disponible */
-        margin-bottom: 10px; /* Espacement entre les sélecteurs */
-    }
 }
 
 
@@ -704,8 +771,8 @@ p {
 @media only screen and (max-width: 604px) {
     .bloc-top img {
         width: 100%;
-        object-fit: cover; /* Assure que l'image est bien ajustée */
-        object-position: center; /* Centrer l'image */
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -715,24 +782,24 @@ p {
         width: 100VW;
     }
 
-        .main-menu-class {
-            display: none; /* Masquer le menu principal */
-        }
+    .main-menu-class {
+        display: none;
+    }
         
-        .menu-button-container {
-            display: flex !important; /* Afficher le bouton de menu */
-            padding: 0 30px 0 0 !important;
-            position: fixed !important;
-        }
+    .menu-button-container {
+        display: flex !important;
+        padding: 0 30px 0 0 !important;
+        position: fixed !important;
+    }
         
-        .primary-menu-container {
-            display: none; /* Assurer que le menu est caché par défaut */
-        }
+    .primary-menu-container {
+        display: none;
+    }
         
-        .primary-menu-container.active {
-            display: block; /* Afficher le menu lorsqu'il est actif */
-            background-color: #E00000;
-        }
+    .primary-menu-container.active {
+        display: block;
+        background-color: #E00000;
+    }
     .primary-navigation {
         position: static;
     }
