@@ -10,6 +10,11 @@ function theme_enqueue_styles() {
     ));
 }
 
+function enqueue_font_awesome() {
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
+
 function register_my_menus() {
     register_nav_menus( array(
         'main-menu'   => __( 'Menu en tete', 'text-domain' ),
@@ -40,9 +45,9 @@ add_action( 'wp_ajax_nopriv_request_photos', 'motaphoto_request_photos' );
 
 function get_random_photo_background() {
     $args = array(
-        'post_type'      => 'photo', // Nom du Custom Post Type
-        'posts_per_page' => 1,        // On veut une seule photo aléatoire
-        'orderby'        => 'rand'    // Trier aléatoirement
+        'post_type'      => 'photo', 
+        'posts_per_page' => 1,        
+        'orderby'        => 'rand'    
     );
     
     $random_photo = new WP_Query($args);
@@ -61,15 +66,17 @@ function load_more_photos() {
     // Requête pour récupérer toutes les photos disponibles
     $total_photos_query = new WP_Query(array(
         'post_type' => 'photo',
-        'posts_per_page' => -1, // Récupérer tous les posts pour obtenir le nombre total
+        'posts_per_page' => -1,
     ));
-    $total_photos = $total_photos_query->found_posts; // Nombre total de photos
+    $total_photos = $total_photos_query->found_posts;
 
     // Requête principale avec pagination
     $args = array(
         'post_type'      => 'photo',
         'posts_per_page' => 8,
         'paged'          => $paged,
+        'orderby'        => 'date',
+        'order'          => 'DESC',    // Du plus récent au plus ancien
     );
 
     $photo_query = new WP_Query($args);
@@ -83,7 +90,7 @@ function load_more_photos() {
         $content = ob_get_clean();
         wp_send_json_success(array(
             'content' => $content,
-            'total_photos' => $total_photos, // Envoyer le nombre total de photos
+            'total_photos' => $total_photos,
             'photos_loaded' => $paged * 8    // Calculer le nombre de photos chargées
         ));
     } else {
@@ -93,9 +100,6 @@ function load_more_photos() {
     wp_reset_postdata();
     wp_die();
 }
-
-// Déclarations AJAX
-add_action('wp_ajax_load_more_photos', 'load_more_photos');
 
 
 function filter_photos() {
@@ -164,5 +168,4 @@ function filter_photos() {
     wp_die();
 }
 
-// Enregistrement des actions AJAX pour utilisateurs connectés et non connectés
 add_action('wp_ajax_filter_photos', 'filter_photos');

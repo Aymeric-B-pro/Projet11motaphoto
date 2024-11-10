@@ -27,11 +27,10 @@ jQuery(document).ready(function($) {
     function loadPhotos(page = 1) {
         let category = $('#category-filter').val();
         let format = $('#format-filter').val();
-        let dateOrder = $('#date-order').val();
+        let dateOrder = $('#date-order').val() || 'DESC'; // Valeur par défaut pour le tri
 
-        console.log("Filtres appliqués:", { category, format, dateOrder, page }); // Log de débogage
+        console.log("Filtres appliqués:", { category, format, dateOrder, page });
 
-        // Envoi de la requête AJAX pour charger les photos filtrées
         $.ajax({
             url: child_style_js.ajax_url,
             type: 'POST',
@@ -43,41 +42,39 @@ jQuery(document).ready(function($) {
                 page: page,
             },
             success: function(response) {
-                console.log('Réponse AJAX reçue:', response); // Afficher la réponse pour vérifier le contenu
+                console.log('Réponse AJAX reçue:', response);
 
                 if (response.success) {
-                    if (page === 1) $('.photo-grid').empty(); // Vider le contenu lors du chargement initial
-                    $('.photo-grid').append(response.data.content); // Ajouter le contenu reçu
+                    if (page === 1) $('.photo-grid').empty();
+                    $('.photo-grid').append(response.data.content);
 
-                    // Gestion du bouton "Load More"
                     if (response.data.photos_loaded >= response.data.total_photos) {
-                        $('#load-more').hide(); // Cacher le bouton si toutes les photos sont chargées
+                        $('#load-more').hide();
                     } else {
-                        $('#load-more').data('page', page + 1); // Mettre à jour la page pour le prochain chargement
-                        $('#load-more').show(); // Assurer que le bouton est visible si besoin de plus
+                        $('#load-more').data('page', page + 1);
+                        $('#load-more').show();
                     }
                 } else {
-                    console.log('Aucune photo trouvée.'); // Message si pas de nouvelles photos
+                    console.log('Aucune photo trouvée.');
                     $('#load-more').hide();
                 }
             },
             error: function(error) {
-                console.log('Erreur AJAX', error); // Afficher l'erreur dans la console pour débogage
+                console.log('Erreur AJAX', error);
             }
         });
     }
 
-    // Appliquer les filtres automatiquement dès qu'un choix est modifié
     $('#category-filter, #format-filter, #date-order').on('change', function() {
-        loadPhotos(1); // Charger depuis la page 1 avec les nouveaux filtres
+        loadPhotos(1);
     });
 
-    // Gérer l'événement "Load More" avec pagination
     $('#load-more').on('click', function() {
         let page = $(this).data('page') || 1;
-        loadPhotos(page); // Charger la page suivante
+        loadPhotos(page);
     });
 });
+
 
 //Récupération Ref Photo
 jQuery(document).ready(function($) {

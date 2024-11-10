@@ -479,7 +479,7 @@ p {
 /* Styles généraux pour chaque filtre */
 .filter-container select {
     border: 1.3px solid #B8BBC2;
-    font-family: 'Ppppins', monospace;
+    font-family: 'Poppins', monospace;
     font-weight: 500;
     width: 260px;
     padding: 11px 18px;
@@ -522,28 +522,6 @@ p {
     background-color: #FFFFFF;
     color: #000000;
     padding: 8px 15px;
-    transition: background-color 0.4s ease;
-}
-
-/* Animation au survol en plusieurs étapes */
-.filter-container select option:hover {
-    background-color: #FFD6D6;
-    color: #FFFFFF;
-    transition: background-color 0.3s ease;
-}
-
-/* Deuxième couleur après un bref délai */
-.filter-container select option:hover::after {
-    background-color: #FE5858;
-    color: #FFFFFF;
-    transition: background-color 0.3s ease 0.3s;
-}
-
-/* Troisième couleur finale après un second délai */
-.filter-container select option:hover::before {
-    background-color: #E00000;
-    color: #FFFFFF;
-    transition: background-color 0.3s ease 0.6s;
 }
 
 /* Positionnement des filtres */
@@ -559,7 +537,6 @@ p {
     margin-left: auto;
 }
 
-
 .photo-catalogue {
     padding: 40px;
 }
@@ -571,10 +548,11 @@ p {
     margin: 40px 0;
 }
 
+/* Styles de base pour le conteneur et l’image */
 .related-photo-block {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* Maintient un carré via un ratio de 1:1 */
+    padding-top: 100%;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -585,8 +563,64 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Remplit le conteneur sans déformation */
+    object-fit: cover;
     object-position: center;
+}
+
+/* Icônes et informations qui apparaissent au survol */
+.related-photo-block .overlay-icon,
+.related-photo-block .photo-info {
+    position: absolute;
+    color: white;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Masqué par défaut */
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Icône œil au centre */
+.related-photo-block .view-icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Icône plein écran en haut à droite */
+.related-photo-block .fullscreen-icon {
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Informations de la photo en bas */
+.related-photo-block .photo-info {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 0.9em;
+}
+
+.related-photo-block .photo-ref,
+.related-photo-block .photo-category {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+
+/* Affichage des éléments au survol de l'image */
+.related-photo-block:hover .overlay-icon,
+.related-photo-block:hover .photo-info {
+    opacity: 1;
 }
 
 /* Bouton Charger plus */
@@ -615,9 +649,13 @@ p {
 }
 
 #load-more:hover {
-    background-color: #555;
+    background-color:#000000;
+    color: white;
 }
 
+#load-more:focus {
+    outline: none;
+}
 
 
 
