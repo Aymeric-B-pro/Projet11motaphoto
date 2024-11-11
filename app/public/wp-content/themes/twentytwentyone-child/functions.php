@@ -15,6 +15,11 @@ function enqueue_font_awesome() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
 
+function enqueue_lightbox_script() {
+    wp_enqueue_script('lightbox', get_stylesheet_directory_uri() . '/js/lightbox.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_lightbox_script');
+
 function register_my_menus() {
     register_nav_menus( array(
         'main-menu'   => __( 'Menu en tete', 'text-domain' ),

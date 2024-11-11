@@ -1,5 +1,4 @@
 <?php
-// template_parts/photo_block.php
 $photo_id = isset($args['photo_id']) ? $args['photo_id'] : 0;
 
 if ($photo_id) {
@@ -11,17 +10,30 @@ if ($photo_id) {
 
     echo '<div class="related-photo-block">';
     echo '<a href="' . esc_url($photo_permalink) . '">';
+
     if ($thumbnail_url) {
         echo '<div class="image-container">';
-            echo '<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_attr($photo_title) . '">';
-            echo '<span class="overlay-icon view-icon">&#128065;</span>';
-            echo '<span class="overlay-icon fullscreen-icon">&#x26F6;</span>';
-                echo '<div class="photo-info">';
-                echo '<span class="photo-ref">' . esc_html(get_field('reference', $photo_id)) . '</span>';
-                echo '<span class="photo-category">' . $category_name . '</span>';
-                echo '</div>';
+        echo '<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_attr($photo_title) . '">';
+
+        // Icône œil avec lien vers la page single-photo
+        echo '<span class="overlay-icon view-icon"><i class="fa fa-eye"></i></span>';
+
+        // Icône plein écran pour déclencher la lightbox avec attributs data-*
+        echo '<span class="overlay-icon fullscreen-icon lightbox-trigger" ';
+        echo 'data-photo-url="' . esc_url($thumbnail_url) . '" ';
+        echo 'data-photo-title="' . esc_attr($photo_title) . '" ';
+        echo 'data-photo-category="' . esc_attr($category_name) . '">';
+        echo '&#x26F6;</span>';
+
+        // Informations sur la photo
+        echo '<div class="photo-info">';
+        echo '<span class="photo-ref">' . esc_html(get_field('reference', $photo_id)) . '</span>';
+        echo '<span class="photo-category">' . $category_name . '</span>';
         echo '</div>';
+
+        echo '</div>'; // fin de .image-container
     }
+
     echo '</a>';
     echo '</div>';
 } else {

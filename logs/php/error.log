@@ -77,3 +77,6 @@ Stack trace:
 #2 D:\localsites\motaphoto\app\public\index.php(17): require('D:\\localsites\\m...')
 #3 {main}
   thrown in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\front-page.php on line 9
+[04-Nov-2024 09:07:41 UTC] PHP Parse error:  syntax error, unexpected token ")", expecting variable in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 178
+[04-Nov-2024 09:07:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\localsites\motaphoto\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[04-Nov-2024 09:07:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\localsites\motaphoto\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368

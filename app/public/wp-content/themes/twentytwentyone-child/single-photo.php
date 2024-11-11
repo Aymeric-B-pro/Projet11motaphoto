@@ -13,7 +13,6 @@ get_header();
 // Commence la boucle WordPress pour récupérer les données du CPT "photo"
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
-
     <div class="single-photo-container">
         <div class="bloc-top" >
             <!-- Bloc de gauche -->
@@ -27,10 +26,11 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
             <!-- Bloc de droite -->
             <div class="right-photo-block">
-                <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="photo-fullsize-link">
-                    <?php the_post_thumbnail('large'); ?>
-                </a>
-            </div>
+        <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" class="photo-fullsize-link lightbox-trigger" data-photo-id="<?php echo get_the_ID(); ?>">
+            <?php the_post_thumbnail('large'); ?>
+        </a>
+
+    </div>
         </div>
         <!-- Bloc du milieu -->
         <div class=middle-box>
