@@ -57,13 +57,10 @@
             </div>
         </div>
 
-</div>
-</footer><!-- #colophon -->
-
-</div><!-- #page -->
-
 <?php wp_footer(); ?>
 <?php get_template_part('template_parts/modal-contact'); ?>
+</footer><!-- #colophon -->
+</div><!-- #page -->
 </body>
 </html>
 

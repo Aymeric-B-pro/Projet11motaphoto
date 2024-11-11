@@ -24,13 +24,15 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <p>ANNÉE : <?php echo get_the_date();?></p>
             </div>
 
-            <!-- Bloc de droite -->
-            <div class="right-photo-block">
-        <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" class="photo-fullsize-link lightbox-trigger" data-photo-id="<?php echo get_the_ID(); ?>">
-            <?php the_post_thumbnail('large'); ?>
-        </a>
-
-    </div>
+            <!-- Bloc de droite SI TU PARLES LA JE NE T'ENTENDS PAS :(-->
+            <div class="right-photo-block ">
+                <a href="<?php echo esc_url(wp_get_attachment_url(get_post_thumbnail_id())); ?>"
+                class="photo-fullsize-link lightbox-trigger"
+                data-photo-url="<?php echo esc_url(wp_get_attachment_url(get_post_thumbnail_id())); ?>"
+                data-photo-title="<?php echo esc_attr(get_the_title()); ?>"
+                data-photo-category="<?php echo esc_attr(wp_get_post_terms($post->ID, 'categorie')[0]->name ?? ''); ?>">
+                <?php the_post_thumbnail('large'); ?></a>
+            </div>
         </div>
         <!-- Bloc du milieu -->
         <div class=middle-box>

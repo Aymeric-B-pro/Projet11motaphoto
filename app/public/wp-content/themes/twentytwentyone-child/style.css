@@ -567,6 +567,25 @@ p {
     object-position: center;
 }
 
+/* Ajoutez le dégradé avec un pseudo-élément ::before */
+.related-photo-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.7) 0%,   /* Dégradé plus sombre en bas */
+        rgba(0, 0, 0, 0.3) 20%,  /* Dégradé plus atténué au milieu */
+        rgba(0, 0, 0, 0) 100%    /* Transparent en haut */
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Place le dégradé sous les icônes et le texte */
+}
+
 /* Icônes et informations qui apparaissent au survol */
 .related-photo-block .overlay-icon,
 .related-photo-block .photo-info {
@@ -575,7 +594,6 @@ p {
     transition: opacity 0.3s ease;
     opacity: 0; /* Masqué par défaut */
     z-index: 2;
-    pointer-events: none;
 }
 
 /* Icône œil au centre */
@@ -623,6 +641,10 @@ p {
     opacity: 1; /* Affiche au survol */
 }
 
+/* Afficher le dégradé au survol */
+.related-photo-block:hover::before {
+    opacity: 1; /* Affiche le dégradé lors du survol */
+}
 /* Ajout d'un dégradé en bas de l'image */
 .photo-info {
     position: absolute;
@@ -631,7 +653,7 @@ p {
     width: 100%;
     padding: 5px 10px;
     color: white;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)); /* Dégradé plus sombre */
+    background: linear-gradient(to middle, rgba(0, 0, 0, 0) 0%, 100%); /* Dégradé plus sombre */
     display: flex;
     justify-content: space-between;
     font-size: 14px;
@@ -690,10 +712,11 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    background-color: rgba(0, 0, 0, 0.8); /* Overlay noir transparent */
     justify-content: center;
     align-items: center;
     z-index: 1000; /* Pour être au-dessus de tout */
+    overflow: hidden; /* Empêche le débordement de contenu */
 }
 
 /* Contenu de la lightbox */
@@ -701,52 +724,56 @@ p {
     position: relative;
     max-width: 90%;
     max-height: 90%;
-    background-color: #fff;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Pas de fond pour le cadre */
+    border-radius: 0; /* Retrait de la bordure arrondie */
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    padding: 20px;
     text-align: center;
-}
-
-/* Bouton de fermeture */
-.closelightbox {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.closelightbox:hover {
-    color: #000;
 }
 
 /* Image dans la lightbox */
 #lightbox-image {
     max-width: 100%;
-    max-height: 70vh;
-    margin: 20px auto;
-    border-radius: 4px;
-    object-fit: contain; /* Pour s'adapter sans déformation */
+    max-height: 80vh; /* Limite la hauteur pour un meilleur ajustement */
+    border-radius: 0; /* Pas de bord arrondi */
+    object-fit: contain; /* Adapte l'image sans déformation */
+    margin: 0; /* Retrait des marges pour l'image */
+}
+
+/* Bouton de fermeture */
+.closelightbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white; /* Blanc pour la visibilité */
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1001; /* Pour qu'il soit au-dessus de tout */
+}
+
+.closelightbox:hover {
+    color: #ff0000; /* Rouge pour indiquer le survol */
 }
 
 /* Informations de la lightbox */
 .lightbox-info {
-    margin-top: 10px;
-    color: #555;
-    font-size: 14px;
+    margin-top: 15px;
+    color: white; /* Blanc pour la visibilité */
+    font-size: 16px;
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box; /* Assure un bon espacement */
+    z-index: 1001; /* Pour être au-dessus de l'image */
 }
 
 .photo-ref,
 .photo-category {
     font-weight: 600;
-    color: #333;
 }
 
 /* Navigation pour les photos */
@@ -757,17 +784,21 @@ p {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    z-index: 1001; /* Pour qu'il soit au-dessus de l'image */
 }
 
 .nav-linklight {
     font-size: 36px;
-    color: #fff;
+    color: white;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    padding: 10px;
-    border-radius: 50%;
+    padding: 15px;
+    border-radius: 50%; /* Forme ronde */
     transition: background-color 0.3s;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-linklight:hover {
@@ -775,13 +806,12 @@ p {
 }
 
 .prev-linklight {
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .next-linklight {
-    margin-right: 15px;
+    margin-right: 20px;
 }
-
 
 
 /* Styles généraux pour tous les écrans */

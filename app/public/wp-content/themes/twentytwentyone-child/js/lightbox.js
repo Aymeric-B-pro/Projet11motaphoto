@@ -5,12 +5,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxImage = document.getElementById('lightbox-image');
     const lightboxRef = document.getElementById('lightbox-ref');
     const lightboxCategory = document.getElementById('lightbox-category');
+    
+    if (!lightbox || !lightboxImage || !lightboxRef || !lightboxCategory) {
+        console.error("La lightbox ou ses éléments manquent dans le DOM.");
+        return;
+    }
+
+    // Sélectionner toutes les icônes de plein écran
     const fullscreenIcons = document.querySelectorAll('.lightbox-trigger');
 
-    // Ajoute un événement de clic à chaque icône pour déclencher la lightbox
+    // Ajouter un événement de clic à chaque icône pour déclencher la lightbox
     fullscreenIcons.forEach(icon => {
         icon.addEventListener('click', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Empêche le comportement par défaut du lien si nécessaire
             console.log("Icône plein écran cliquée");
 
             const photoUrl = icon.getAttribute('data-photo-url');
@@ -29,15 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fonction pour ouvrir la lightbox
     function openLightbox(photoUrl, photoTitle, photoCategory) {
-        if (lightbox) {
-            lightboxImage.src = photoUrl;
-            lightboxRef.textContent = photoTitle || "Référence non disponible";
-            lightboxCategory.textContent = photoCategory || "Catégorie non disponible";
-            lightbox.style.display = 'flex';
-            console.log("Lightbox affichée avec l'URL:", photoUrl);
-        } else {
-            console.error("La lightbox n'a pas pu être affichée.");
-        }
+        lightboxImage.src = photoUrl;
+        lightboxRef.textContent = photoTitle || "Référence non disponible";
+        lightboxCategory.textContent = photoCategory || "Catégorie non disponible";
+        lightbox.style.display = 'flex';
+        console.log("Lightbox affichée avec l'URL:", photoUrl);
     }
 
     // Ferme la lightbox
