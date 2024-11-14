@@ -703,8 +703,7 @@ p {
 }
 
 
-/* Styles de la lightbox */
-/* Style général de la lightbox */
+/* Lightbox principale */
 .lightbox {
     display: none;
     position: fixed;
@@ -728,19 +727,9 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: transparent; /* Pas de fond pour le cadre */
-    border-radius: 0; /* Retrait de la bordure arrondie */
+    background-color: transparent;
     overflow: hidden;
     text-align: center;
-}
-
-/* Image dans la lightbox */
-#lightbox-image {
-    max-width: 100%;
-    max-height: 80vh; /* Limite la hauteur pour un meilleur ajustement */
-    border-radius: 0; /* Pas de bord arrondi */
-    object-fit: contain; /* Adapte l'image sans déformation */
-    margin: 0; /* Retrait des marges pour l'image */
 }
 
 /* Bouton de fermeture */
@@ -749,70 +738,70 @@ p {
     top: 20px;
     right: 20px;
     font-size: 30px;
-    color: white; /* Blanc pour la visibilité */
+    color: white;
     cursor: pointer;
     transition: color 0.3s;
-    z-index: 1001; /* Pour qu'il soit au-dessus de tout */
+    z-index: 1001;
 }
 
 .closelightbox:hover {
     color: #ff0000; /* Rouge pour indiquer le survol */
 }
 
-/* Informations de la lightbox */
-.lightbox-info {
-    margin-top: 15px;
-    color: white; /* Blanc pour la visibilité */
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box; /* Assure un bon espacement */
-    z-index: 1001; /* Pour être au-dessus de l'image */
-}
-
-.photo-ref,
-.photo-category {
-    font-weight: 600;
-}
-
-/* Navigation pour les photos */
-.lightbox-navigation {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 1001; /* Pour qu'il soit au-dessus de l'image */
-}
-
-.nav-linklight {
-    font-size: 36px;
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    padding: 15px;
-    border-radius: 50%; /* Forme ronde */
-    transition: background-color 0.3s;
-    cursor: pointer;
+/* Flexbox qui contient les flèches et l'image */
+.lightbox-flex-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%; /* Pour limiter la largeur globale */
+    margin: auto; /* Centrer horizontalement */
 }
 
-.nav-linklight:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+#lightbox-image {
+    max-width: 100%; /* Ajuste la taille de l'image pour laisser de l'espace pour les flèches */
+    max-height: 80vh; /* Limite la hauteur pour un meilleur ajustement */
+    border-radius: 0;
+    object-fit: contain;
+}
+
+/* Styles pour les liens de navigation (flèches) */
+.nav-linklight {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Taille du texte */
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; /* Ajustez selon vos besoins */
+    border-radius: 50%; /* Forme arrondie pour le bouton */
+    transition: background-color 0.3s;
+    cursor: pointer;
+    gap: 8px; /* Ajoute un espace de 8px entre le texte et la flèche */
 }
 
 .prev-linklight {
     margin-left: 20px;
+    flex-direction: row-reverse; /* Inverse l'ordre : texte suivi de la flèche */
 }
 
 .next-linklight {
     margin-right: 20px;
 }
 
+/* Informations de la lightbox */
+.lightbox-info {
+    font-family: Space Mono;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1001;
+}
 
 /* Styles généraux pour tous les écrans */
 /* Très grand écran */
