@@ -1246,4 +1246,378 @@ INSERT INTO `wp_posts` VALUES (37,1,'2024-09-02 17:52:46','2024-09-02 15:52:46',
 INSERT INTO `wp_posts` VALUES (38,1,'2024-09-02 17:53:30','2024-09-02 15:53:30','','Vie privée','','trash','closed','closed','','vie-privee__trashed','','','2024-09-02 17:54:03','2024-09-02 15:54:03','',0,'http://motaphoto.local/?page_id=38',0,'page','',0);
 INSERT INTO `wp_posts` VALUES (39,1,'2024-09-02 17:53:30','2024-09-02 15:53:30','','Vie privée','','inherit','closed','closed','','38-revision-v1','','','2024-09-02 17:53:30','2024-09-02 15:53:30','',38,'http://motaphoto.local/?p=39',0,'revision','',0);
 INSERT INTO `wp_posts` VALUES (40,1,'2024-09-02 17:54:21','2024-09-02 15:54:21','<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Who we are</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>Our website address is: http://motaphoto.local.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Comments</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Media</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Cookies</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Embedded content from other websites</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Who we share your data with</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you request a password reset, your IP address will be included in the reset email.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">How long we retain your data</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">What rights you have over your data</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Where your data is sent</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>Visitor comments may be checked through an automated spam detection service.</p>\n<!-- /wp:paragraph -->\n','Vie privée','','inherit','closed','closed','','3-revision-v1','','','2024-09-02 17:54:21','2024-09-02 15:54:21','',3,'http://motaphoto.local/?p=40',0,'revision','',0);
-INSERT INTO `wp_posts` VALUES (41,1,'2024-09-02 17:55:17','2024-09-02 15:55:17','','MENTIONS LÉGALES','','publish','closed','closed','','mentions-legales','','','2024-09-08 08:2
+INSERT INTO `wp_posts` VALUES (41,1,'2024-09-02 17:55:17','2024-09-02 15:55:17','','MENTIONS LÉGALES','','publish','closed','closed','','mentions-legales','','','2024-09-08 08:23:53','2024-09-08 06:23:53','',0,'http://motaphoto.local/?page_id=41',0,'page','',0);
+INSERT INTO `wp_posts` VALUES (42,1,'2024-09-02 17:55:17','2024-09-02 15:55:17','','Mentions légales','','inherit','closed','closed','','41-revision-v1','','','2024-09-02 17:55:17','2024-09-02 15:55:17','',41,'http://motaphoto.local/?p=42',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (43,1,'2024-09-02 17:56:16','2024-09-02 15:56:16','','TOUS DROITS RESERVÉS','','publish','closed','closed','','tous-droits-reserves','','','2024-09-08 08:22:59','2024-09-08 06:22:59','',0,'http://motaphoto.local/?page_id=43',0,'page','',0);
+INSERT INTO `wp_posts` VALUES (44,1,'2024-09-02 17:56:16','2024-09-02 15:56:16','','Tous droits réservés','','inherit','closed','closed','','43-revision-v1','','','2024-09-02 17:56:16','2024-09-02 15:56:16','',43,'http://motaphoto.local/?p=44',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (50,1,'2024-09-08 08:21:08','2024-09-08 06:21:08','','VIE PRIVÉE','','publish','closed','closed','','vie-privee','','','2024-09-08 08:21:47','2024-09-08 06:21:47','',0,'http://motaphoto.local/?page_id=50',0,'page','',0);
+INSERT INTO `wp_posts` VALUES (51,1,'2024-09-08 08:21:08','2024-09-08 06:21:08','','VIE PRIVÉE','','inherit','closed','closed','','50-revision-v1','','','2024-09-08 08:21:08','2024-09-08 06:21:08','',50,'http://motaphoto.local/?p=51',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (52,1,'2024-09-08 08:21:33','2024-09-08 06:21:33','<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Who we are</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>Our website address is: http://motaphoto.local.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Comments</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Media</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Cookies</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Embedded content from other websites</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Who we share your data with</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you request a password reset, your IP address will be included in the reset email.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">How long we retain your data</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">What rights you have over your data</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Where your data is sent</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">Suggested text: </strong>Visitor comments may be checked through an automated spam detection service.</p>\n<!-- /wp:paragraph -->\n','VIE PRIVÉE','','inherit','closed','closed','','3-revision-v1','','','2024-09-08 08:21:33','2024-09-08 06:21:33','',3,'http://motaphoto.local/?p=52',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (54,1,'2024-09-08 08:22:59','2024-09-08 06:22:59','','TOUS DROITS RESERVÉS','','inherit','closed','closed','','43-revision-v1','','','2024-09-08 08:22:59','2024-09-08 06:22:59','',43,'http://motaphoto.local/?p=54',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (55,1,'2024-09-08 08:23:11','2024-09-08 06:23:11','<!-- wp:paragraph -->\n<p>Vous pourriez être un artiste et vouloir présenter vos travaux et vous même, ou encore être une entreprise avec une mission à promouvoir.</p>\n<!-- /wp:paragraph -->','À PROPOS DE','','inherit','closed','closed','','17-revision-v1','','','2024-09-08 08:23:11','2024-09-08 06:23:11','',17,'http://motaphoto.local/?p=55',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (56,1,'2024-09-08 08:23:25','2024-09-08 06:23:25','<!-- wp:paragraph -->\n<p>C’est une page avec des informations de contact de base, comme l’adresse et le numéro de téléphone. Vous pouvez aussi essayer une extension pour ajouter un formulaire de contact.</p>\n<!-- /wp:paragraph -->','CONTACT','','inherit','closed','closed','','18-revision-v1','','','2024-09-08 08:23:25','2024-09-08 06:23:25','',18,'http://motaphoto.local/?p=56',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (57,1,'2024-09-08 08:23:25','2024-09-08 06:23:25','<!-- wp:paragraph -->\n<p>C’est une page avec des informations de contact de base, comme l’adresse et le numéro de téléphone. Vous pouvez aussi essayer une extension pour ajouter un formulaire de contact.</p>\n<!-- /wp:paragraph -->','CONTACT','','inherit','closed','closed','','18-revision-v1','','','2024-09-08 08:23:25','2024-09-08 06:23:25','',18,'http://motaphoto.local/?p=57',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (58,1,'2024-09-08 08:23:34','2024-09-08 06:23:34','','ACCEUIL','','inherit','closed','closed','','8-revision-v1','','','2024-09-08 08:23:34','2024-09-08 06:23:34','',8,'http://motaphoto.local/?p=58',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (59,1,'2024-09-08 08:23:53','2024-09-08 06:23:53','','MENTIONS LÉGALES','','inherit','closed','closed','','41-revision-v1','','','2024-09-08 08:23:53','2024-09-08 06:23:53','',41,'http://motaphoto.local/?p=59',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (66,1,'2024-09-09 06:06:20','2024-09-09 04:06:20','{\n    \"twentytwentyone-child::background_color\": {\n        \"value\": \"#ffffff\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 04:06:20\"\n    }\n}','','','trash','closed','closed','','7249ed8c-9469-4db0-8bb1-a79ddfa155bf','','','2024-09-09 06:06:20','2024-09-09 04:06:20','',0,'http://motaphoto.local/7249ed8c-9469-4db0-8bb1-a79ddfa155bf/',0,'customize_changeset','',0);
+INSERT INTO `wp_posts` VALUES (67,1,'2024-09-09 06:06:53','0000-00-00 00:00:00','{\n    \"show_on_front\": {\n        \"value\": \"posts\",\n        \"type\": \"option\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 04:06:53\"\n    }\n}','','','auto-draft','closed','closed','','cc05ac7d-0e49-412b-b5e3-6226c86c0898','','','2024-09-09 06:06:53','0000-00-00 00:00:00','',0,'http://motaphoto.local/?p=67',0,'customize_changeset','',0);
+INSERT INTO `wp_posts` VALUES (68,1,'2024-09-09 08:14:57','2024-09-09 06:14:57','{\n    \"twentytwentyone-child::custom_logo\": {\n        \"value\": 21,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 06:14:57\"\n    },\n    \"twentytwentyone-child::display_title_and_tagline\": {\n        \"value\": false,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 06:14:57\"\n    }\n}','','','trash','closed','closed','','e81d9be7-b935-43ee-89b0-47be3a30b1e2','','','2024-09-09 08:14:57','2024-09-09 06:14:57','',0,'http://motaphoto.local/e81d9be7-b935-43ee-89b0-47be3a30b1e2/',0,'customize_changeset','',0);
+INSERT INTO `wp_posts` VALUES (69,1,'2024-09-09 11:31:40','2024-09-09 09:31:40','<label> NOM\r\n    [text* your-name autocomplete:name] </label>\r\n\r\n<label> E-MAIL\r\n    [email* your-email autocomplete:email] </label>\r\n\r\n<label> RÉF. PHOTO\r\n    [text* your-subject] </label>\r\n\r\n<label> MESSAGE\r\n    [textarea your-message] </label>\r\n\r\n[submit class:submitbtn \"Envoyer\"]\n1\n[_site_title] \"[your-subject]\"\n[_site_title] <wordpress@motaphoto.local>\n[_site_admin_email]\nDe : [your-name] [your-email]\r\nObjet : [your-subject]\r\n\r\nCorps du message :\r\n[your-message]\r\n\r\n-- \r\nCeci est une notification qu’un formulaire de contact a été envoyé sur votre site web ([_site_title] [_site_url]).\nReply-To: [your-email]\n\n\n\n\n[_site_title] \"[your-subject]\"\n[_site_title] <wordpress@motaphoto.local>\n[your-email]\nCorps du message :\r\n[your-message]\r\n\r\n-- \r\nCet e-mail est un accusé de réception du formulaire de contact que vous avez envoyé sur notre site web ([_site_title] [_site_url]) et dans lequel votre adresse e-mail a été utilisée. Si ce n’est pas vous, veuillez ignorer ce message.\nReply-To: [_site_admin_email]\n\n\n\nMerci pour votre message. Il a été envoyé.\nUne erreur s’est produite lors de l’envoi de votre message. Veuillez essayer à nouveau plus tard.\nUn ou plusieurs champs contiennent une erreur. Veuillez vérifier et essayer à nouveau.\nUne erreur s’est produite lors de l’envoi de votre message. Veuillez essayer à nouveau plus tard.\nVous devez accepter les termes et conditions avant d’envoyer votre message.\nVeuillez renseigner ce champ.\nCe champ a une saisie trop longue.\nCe champ a une saisie trop courte.\nUne erreur inconnue s’est produite lors du téléversement du fichier.\nVous n’avez pas les droits nécessaires pour téléverser ce type de fichier.\nLe fichier téléversé est trop volumineux.\nUne erreur s’est produite lors du téléversement du fichier.\nVeuillez saisir une date au format AAAA-MM-JJ.\nLa date de ce champ est trop tôt.\nLa date de ce champ est trop tardive.\nVeuillez saisir un numéro.\nLe chiffre de ce champ est trop petit.\nCe champ a un numéro trop long.\nLa réponse à la question est incorrecte.\nVeuillez saisir votre adresse e-mail.\nVeuillez saisisr une URL\nVeuillez saisir un numéro de téléphone.','Contactez-moi','','publish','closed','closed','','formulaire-de-contact-1','','','2024-09-23 04:01:36','2024-09-23 02:01:36','',0,'http://motaphoto.local/?post_type=wpcf7_contact_form&#038;p=69',0,'wpcf7_contact_form','',0);
+INSERT INTO `wp_posts` VALUES (70,1,'2024-09-09 11:32:07','2024-09-09 09:32:07','<!-- wp:paragraph -->\n<p>This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin\' caught in the rain.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...or something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>As a new WordPress user, you should go to <a href=\"http://motaphoto.local/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n<!-- /wp:paragraph -->','Sample Page','','inherit','closed','closed','','2-revision-v1','','','2024-09-09 11:32:07','2024-09-09 09:32:07','',2,'http://motaphoto.local/?p=70',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (71,1,'2024-09-09 11:41:52','2024-09-09 09:41:52','','ACCEUIL','','inherit','closed','closed','','8-revision-v1','','','2024-09-09 11:41:52','2024-09-09 09:41:52','',8,'http://motaphoto.local/?p=71',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (72,1,'2024-09-09 11:41:52','2024-09-09 09:41:52','','ACCEUIL','','inherit','closed','closed','','8-revision-v1','','','2024-09-09 11:41:52','2024-09-09 09:41:52','',8,'http://motaphoto.local/?p=72',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (73,1,'2024-09-09 11:41:53','2024-09-09 09:41:53','','ACCEUIL','','inherit','closed','closed','','8-revision-v1','','','2024-09-09 11:41:53','2024-09-09 09:41:53','',8,'http://motaphoto.local/?p=73',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (74,1,'2024-09-09 12:22:09','2024-09-09 10:22:09','{\n    \"twentytwentyone-child::nav_menu_locations[footer-menu]\": {\n        \"value\": 0,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 10:22:09\"\n    },\n    \"twentytwentyone-child::nav_menu_locations[primary]\": {\n        \"value\": 6,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 10:22:09\"\n    }\n}','','','trash','closed','closed','','8f6241bd-3964-4279-9318-ac7af4df606d','','','2024-09-09 12:22:09','2024-09-09 10:22:09','',0,'http://motaphoto.local/8f6241bd-3964-4279-9318-ac7af4df606d/',0,'customize_changeset','',0);
+INSERT INTO `wp_posts` VALUES (75,1,'2024-09-09 12:22:40','2024-09-09 10:22:40','{\n    \"twentytwentyone-child::nav_menu_locations[main-menu]\": {\n        \"value\": 6,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 10:22:40\"\n    },\n    \"twentytwentyone-child::nav_menu_locations[footer-menu]\": {\n        \"value\": 5,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 10:22:40\"\n    },\n    \"twentytwentyone-child::nav_menu_locations[primary]\": {\n        \"value\": 0,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 10:22:40\"\n    }\n}','','','trash','closed','closed','','77308e22-bb20-4e79-8497-2d1caa7fa225','','','2024-09-09 12:22:40','2024-09-09 10:22:40','',0,'http://motaphoto.local/77308e22-bb20-4e79-8497-2d1caa7fa225/',0,'customize_changeset','',0);
+INSERT INTO `wp_posts` VALUES (76,1,'2024-09-09 12:34:56','2024-09-09 10:34:56','{\n    \"twentytwentyone-child::nav_menu_locations[main-menu]\": {\n        \"value\": 5,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 10:34:56\"\n    },\n    \"twentytwentyone-child::nav_menu_locations[footer-menu]\": {\n        \"value\": 6,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-09 10:34:56\"\n    }\n}','','','trash','closed','closed','','a4ac4e97-c069-4841-ac09-139435b3852b','','','2024-09-09 12:34:56','2024-09-09 10:34:56','',0,'http://motaphoto.local/a4ac4e97-c069-4841-ac09-139435b3852b/',0,'customize_changeset','',0);
+INSERT INTO `wp_posts` VALUES (77,1,'2024-09-13 10:29:19','2024-09-13 08:29:19','{\n    \"custom_css[twentytwentyone-child]\": {\n        \"value\": \"    max-width: 100%;\\n    margin: 0 30px;\",\n        \"type\": \"custom_css\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-13 08:29:19\"\n    }\n}','','','trash','closed','closed','','8c4ffb95-fcf2-4205-9fae-5f2fcbc9ccd5','','','2024-09-13 10:29:19','2024-09-13 08:29:19','',0,'http://motaphoto.local/8c4ffb95-fcf2-4205-9fae-5f2fcbc9ccd5/',0,'customize_changeset','',0);
+INSERT INTO `wp_posts` VALUES (78,1,'2024-09-13 10:29:19','2024-09-13 08:29:19','','twentytwentyone-child','','publish','closed','closed','','twentytwentyone-child','','','2024-09-13 10:31:21','2024-09-13 08:31:21','',0,'http://motaphoto.local/twentytwentyone-child/',0,'custom_css','',0);
+INSERT INTO `wp_posts` VALUES (79,1,'2024-09-13 10:29:19','2024-09-13 08:29:19','    max-width: 100%;\n    margin: 0 30px;','twentytwentyone-child','','inherit','closed','closed','','78-revision-v1','','','2024-09-13 10:29:19','2024-09-13 08:29:19','',78,'http://motaphoto.local/?p=79',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (80,1,'2024-09-13 10:31:21','2024-09-13 08:31:21','{\n    \"custom_css[twentytwentyone-child]\": {\n        \"value\": \"\",\n        \"type\": \"custom_css\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2024-09-13 08:31:21\"\n    }\n}','','','trash','closed','closed','','d5c458a2-fb2e-497c-a5f6-52e158a2b219','','','2024-09-13 10:31:21','2024-09-13 08:31:21','',0,'http://motaphoto.local/d5c458a2-fb2e-497c-a5f6-52e158a2b219/',0,'customize_changeset','',0);
+INSERT INTO `wp_posts` VALUES (81,1,'2024-09-13 10:31:21','2024-09-13 08:31:21','','twentytwentyone-child','','inherit','closed','closed','','78-revision-v1','','','2024-09-13 10:31:21','2024-09-13 08:31:21','',78,'http://motaphoto.local/?p=81',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (83,1,'2024-09-16 17:08:58','0000-00-00 00:00:00','','CONTACT','','draft','closed','closed','','','','','2024-09-16 17:08:58','0000-00-00 00:00:00','',0,'http://motaphoto.local/?p=83',1,'nav_menu_item','',0);
+INSERT INTO `wp_posts` VALUES (84,1,'2024-09-29 05:55:53','2024-09-16 15:11:53','','CONTACT','','publish','closed','closed','','contact','','','2024-09-29 05:55:53','2024-09-29 03:55:53','',0,'http://motaphoto.local/?p=84',3,'nav_menu_item','',0);
+INSERT INTO `wp_posts` VALUES (85,1,'2024-09-29 05:55:53','2024-09-16 15:11:53',' ','','','publish','closed','closed','','85','','','2024-09-29 05:55:53','2024-09-29 03:55:53','',0,'http://motaphoto.local/?p=85',1,'nav_menu_item','',0);
+INSERT INTO `wp_posts` VALUES (86,1,'2024-09-16 17:11:17','0000-00-00 00:00:00',' ','','','draft','closed','closed','','','','','2024-09-16 17:11:17','0000-00-00 00:00:00','',0,'http://motaphoto.local/?p=86',1,'nav_menu_item','',0);
+INSERT INTO `wp_posts` VALUES (87,1,'2024-09-29 05:55:53','2024-09-16 15:11:53',' ','','','publish','closed','closed','','87','','','2024-09-29 05:55:53','2024-09-29 03:55:53','',0,'http://motaphoto.local/?p=87',2,'nav_menu_item','',0);
+INSERT INTO `wp_posts` VALUES (88,1,'2024-09-16 17:13:16','2024-09-16 15:13:16',' ','','','publish','closed','closed','','88','','','2024-09-16 17:13:16','2024-09-16 15:13:16','',0,'http://motaphoto.local/?p=88',1,'nav_menu_item','',0);
+INSERT INTO `wp_posts` VALUES (89,1,'2024-09-16 17:13:16','2024-09-16 15:13:16',' ','','','publish','closed','closed','','89','','','2024-09-16 17:13:16','2024-09-16 15:13:16','',0,'http://motaphoto.local/?p=89',2,'nav_menu_item','',0);
+INSERT INTO `wp_posts` VALUES (90,1,'2024-09-16 17:13:16','2024-09-16 15:13:16',' ','','','publish','closed','closed','','90','','','2024-09-16 17:13:16','2024-09-16 15:13:16','',0,'http://motaphoto.local/?p=90',3,'nav_menu_item','',0);
+INSERT INTO `wp_posts` VALUES (91,1,'2024-09-23 16:43:03','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 16:43:03','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=photo&p=91',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (92,1,'2024-09-23 16:59:32','2024-09-23 14:59:32','a:8:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:9:\"post_type\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:5:\"photo\";}}}s:8:\"position\";s:6:\"normal\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";s:0:\"\";s:11:\"description\";s:0:\"\";s:12:\"show_in_rest\";i:0;}','Type','type','publish','closed','closed','','group_66f17f7edd483','','','2024-09-26 04:35:45','2024-09-26 02:35:45','',0,'http://motaphoto.local/?post_type=acf-field-group&#038;p=92',0,'acf-field-group','',0);
+INSERT INTO `wp_posts` VALUES (93,1,'2024-09-23 16:59:32','2024-09-23 14:59:32','a:14:{s:10:\"aria-label\";s:0:\"\";s:4:\"type\";s:5:\"radio\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:7:\"choices\";a:2:{s:10:\"Argentique\";s:10:\"Argentique\";s:10:\"Numérique\";s:10:\"Numérique\";}s:13:\"default_value\";s:0:\"\";s:13:\"return_format\";s:5:\"value\";s:10:\"allow_null\";i:0;s:12:\"other_choice\";i:0;s:17:\"allow_in_bindings\";i:0;s:6:\"layout\";s:8:\"vertical\";s:17:\"save_other_choice\";i:0;}','Type','type','publish','closed','closed','','field_66f17f81af833','','','2024-09-23 16:59:32','2024-09-23 14:59:32','',92,'http://motaphoto.local/?post_type=acf-field&p=93',0,'acf-field','',0);
+INSERT INTO `wp_posts` VALUES (94,1,'2024-09-23 16:59:40','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 16:59:40','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=photo&p=94',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (95,1,'2024-09-23 17:00:15','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 17:00:15','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=photo&p=95',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (96,1,'2024-09-23 17:00:42','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 17:00:42','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=acf-field-group&p=96',0,'acf-field-group','',0);
+INSERT INTO `wp_posts` VALUES (97,1,'2024-09-23 17:00:42','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 17:00:42','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=acf-field-group&p=97',0,'acf-field-group','',0);
+INSERT INTO `wp_posts` VALUES (98,1,'2024-09-23 17:02:28','2024-09-23 15:02:28','a:8:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:9:\"post_type\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:5:\"photo\";}}}s:8:\"position\";s:6:\"normal\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";s:0:\"\";s:11:\"description\";s:0:\"\";s:12:\"show_in_rest\";i:0;}','Référence','reference','publish','closed','closed','','group_66f182b50e4cc','','','2024-09-26 04:35:22','2024-09-26 02:35:22','',0,'http://motaphoto.local/?post_type=acf-field-group&#038;p=98',0,'acf-field-group','',0);
+INSERT INTO `wp_posts` VALUES (99,1,'2024-09-23 17:02:28','2024-09-23 15:02:28','a:12:{s:10:\"aria-label\";s:0:\"\";s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";s:17:\"allow_in_bindings\";i:0;s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";}','Référence','reference','publish','closed','closed','','field_66f182b59346f','','','2024-09-23 17:02:28','2024-09-23 15:02:28','',98,'http://motaphoto.local/?post_type=acf-field&p=99',0,'acf-field','',0);
+INSERT INTO `wp_posts` VALUES (100,1,'2024-09-23 17:07:29','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 17:07:29','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=photo&p=100',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (101,1,'2024-09-23 17:10:33','2024-09-23 15:10:33','Match de foot','nathalie-10','Match de foot','inherit','open','closed','','nathalie-10','','','2024-09-26 06:01:45','2024-09-26 04:01:45','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-10.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (102,1,'2024-09-23 17:10:37','2024-09-23 15:10:37','','nathalie-11','Préparation pre-concert','inherit','open','closed','','nathalie-11','','','2024-09-26 06:06:11','2024-09-26 04:06:11','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-11.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (103,1,'2024-09-23 17:10:41','2024-09-23 15:10:41','Gens de couleur à l\'extérieur pendant la fête','nathalie-12','','inherit','open','closed','','nathalie-12','','','2024-09-26 06:08:52','2024-09-26 04:08:52','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-12.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (104,1,'2024-09-23 17:10:45','2024-09-23 15:10:45','Bouquet de mariage','nathalie-13','Bouquet de mariage','inherit','open','closed','','nathalie-13','','','2024-09-26 06:10:53','2024-09-26 04:10:53','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-13.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (105,1,'2024-09-23 17:10:50','2024-09-23 15:10:50','Les mariés dans le soleil couchant','nathalie-14','Photo des mariés dans le soleil couchant','inherit','open','closed','','nathalie-14','','','2024-09-26 06:43:23','2024-09-26 04:43:23','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-14.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (106,1,'2024-09-23 17:10:55','2024-09-23 15:10:55','La mariée et ses dames','nathalie-15','La mariée et ses dames','inherit','open','closed','','nathalie-15','','','2024-09-26 06:59:24','2024-09-26 04:59:24','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-15.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (107,1,'2024-09-23 17:11:00','2024-09-23 15:11:00','','nathalie-0','','inherit','open','closed','','nathalie-0','','','2024-09-23 17:25:15','2024-09-23 15:25:15','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-0.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (108,1,'2024-09-23 17:11:05','2024-09-23 15:11:05','Table d\'anniversaire classe','nathalie-1','Table d\'anniversaire classe','inherit','open','closed','','nathalie-1','','','2024-09-26 04:40:36','2024-09-26 02:40:36','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-1.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (109,1,'2024-09-23 17:11:10','2024-09-23 15:11:10','Soirée fête et danse avec feu d\'artifice','nathalie-2','Soirée fête et danse avec feu d\'artifice','inherit','open','closed','','nathalie-2','','','2024-09-26 04:43:05','2024-09-26 02:43:05','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-2.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (110,1,'2024-09-23 17:11:13','2024-09-23 15:11:13','Preparation de mariage, tables et plantes','nathalie-3','Preparation de mariage, tables et plantes','inherit','open','closed','','nathalie-3','','','2024-09-26 04:44:49','2024-09-26 02:44:49','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-3.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (111,1,'2024-09-23 17:11:18','2024-09-23 15:11:18','Lieu de mariage extérieur','nathalie-4','Lieu de mariage extérieur','inherit','open','closed','','nathalie-4','','','2024-09-26 04:46:49','2024-09-26 02:46:49','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-4.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (112,1,'2024-09-23 17:11:22','2024-09-23 15:11:22','Baiser des mariés','nathalie-5','Baiser des mariés','inherit','open','closed','','nathalie-5','','','2024-09-26 04:48:21','2024-09-26 02:48:21','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-5.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (113,1,'2024-09-23 17:11:26','2024-09-23 15:11:26','Danse de couples, slow','nathalie-6','Danse de couples, slow','inherit','open','closed','','nathalie-6','','','2024-09-26 04:51:35','2024-09-26 02:51:35','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-6.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (114,1,'2024-09-23 17:11:33','2024-09-23 15:11:33','Menu de mariage','nathalie-7','Menu de mariage','inherit','open','closed','','nathalie-7','','','2024-09-26 04:52:51','2024-09-26 02:52:51','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-7.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (115,1,'2024-09-23 17:11:37','2024-09-23 15:11:37','Bal masqué','nathalie-8','Bal masqué','inherit','open','closed','','nathalie-8','','','2024-09-26 05:48:34','2024-09-26 03:48:34','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-8.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (116,1,'2024-09-23 17:11:42','2024-09-23 15:11:42','Mariage, danse générale','nathalie-9','Mariage, danse générale','inherit','open','closed','','nathalie-9','','','2024-09-26 05:59:41','2024-09-26 03:59:41','',0,'http://motaphoto.local/wp-content/uploads/2024/09/nathalie-9.jpeg',0,'attachment','image/jpeg',0);
+INSERT INTO `wp_posts` VALUES (117,1,'2024-09-23 17:19:27','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 17:19:27','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=photo&p=117',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (118,1,'2024-09-23 17:22:02','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 17:22:02','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=photo&p=118',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (119,1,'2019-09-23 17:26:37','2019-09-23 15:26:37','','Santé !','','publish','closed','closed','','sante','','','2024-09-26 04:38:55','2024-09-26 02:38:55','',0,'http://motaphoto.local/?post_type=photo&#038;p=119',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (120,1,'2024-09-23 17:34:36','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 17:34:36','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=photo&p=120',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (123,1,'2024-09-23 17:51:59','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 17:51:59','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=acf-taxonomy&p=123',0,'acf-taxonomy','',0);
+INSERT INTO `wp_posts` VALUES (124,1,'2024-09-23 17:54:25','2024-09-23 15:54:25','a:29:{s:8:\"taxonomy\";s:6:\"format\";s:11:\"object_type\";a:1:{i:0;s:4:\"test\";}s:22:\"advanced_configuration\";i:1;s:13:\"import_source\";s:0:\"\";s:11:\"import_date\";s:0:\"\";s:6:\"labels\";a:25:{s:4:\"name\";s:7:\"Formats\";s:13:\"singular_name\";s:6:\"Format\";s:9:\"menu_name\";s:7:\"Formats\";s:9:\"all_items\";s:16:\"Tous les Formats\";s:9:\"edit_item\";s:15:\"Modifier Format\";s:9:\"view_item\";s:11:\"Voir Format\";s:11:\"update_item\";s:21:\"Mettre à jour Format\";s:12:\"add_new_item\";s:14:\"Ajouter Format\";s:13:\"new_item_name\";s:21:\"Nom du nouveau Format\";s:11:\"parent_item\";s:0:\"\";s:17:\"parent_item_colon\";s:0:\"\";s:12:\"search_items\";s:18:\"Rechercher Formats\";s:9:\"most_used\";s:0:\"\";s:9:\"not_found\";s:21:\"Aucun formats trouvé\";s:8:\"no_terms\";s:13:\"Aucun formats\";s:22:\"name_field_description\";s:0:\"\";s:22:\"slug_field_description\";s:0:\"\";s:24:\"parent_field_description\";s:0:\"\";s:22:\"desc_field_description\";s:0:\"\";s:14:\"filter_by_item\";s:0:\"\";s:21:\"items_list_navigation\";s:32:\"Navigation dans la liste Formats\";s:10:\"items_list\";s:13:\"Liste Formats\";s:13:\"back_to_items\";s:26:\"← Aller à « formats »\";s:9:\"item_link\";s:11:\"Lien Format\";s:21:\"item_link_description\";s:22:\"Un lien vers un format\";}s:11:\"description\";s:0:\"\";s:12:\"capabilities\";a:4:{s:12:\"manage_terms\";s:17:\"manage_categories\";s:10:\"edit_terms\";s:17:\"manage_categories\";s:12:\"delete_terms\";s:17:\"manage_categories\";s:12:\"assign_terms\";s:10:\"edit_posts\";}s:6:\"public\";i:1;s:18:\"publicly_queryable\";i:1;s:12:\"hierarchical\";i:1;s:7:\"show_ui\";i:1;s:12:\"show_in_menu\";i:1;s:17:\"show_in_nav_menus\";i:1;s:12:\"show_in_rest\";i:1;s:9:\"rest_base\";s:0:\"\";s:14:\"rest_namespace\";s:5:\"wp/v2\";s:21:\"rest_controller_class\";s:24:\"WP_REST_Terms_Controller\";s:13:\"show_tagcloud\";i:1;s:18:\"show_in_quick_edit\";i:1;s:17:\"show_admin_column\";i:0;s:7:\"rewrite\";a:3:{s:17:\"permalink_rewrite\";s:12:\"taxonomy_key\";s:10:\"with_front\";s:1:\"1\";s:20:\"rewrite_hierarchical\";s:1:\"0\";}s:9:\"query_var\";s:13:\"post_type_key\";s:14:\"query_var_name\";s:0:\"\";s:12:\"default_term\";a:1:{s:20:\"default_term_enabled\";s:1:\"0\";}s:4:\"sort\";i:0;s:8:\"meta_box\";s:7:\"default\";s:11:\"meta_box_cb\";s:0:\"\";s:20:\"meta_box_sanitize_cb\";s:0:\"\";}','Formats','formats','trash','closed','closed','','taxonomy_66f18ee3ce3e9__trashed','','','2024-09-26 04:34:04','2024-09-26 02:34:04','',0,'http://motaphoto.local/?post_type=acf-taxonomy&#038;p=124',0,'acf-taxonomy','',0);
+INSERT INTO `wp_posts` VALUES (125,1,'2024-09-23 17:59:15','2024-09-23 15:59:15','a:35:{s:9:\"post_type\";s:4:\"test\";s:22:\"advanced_configuration\";b:0;s:13:\"import_source\";s:0:\"\";s:11:\"import_date\";s:0:\"\";s:6:\"labels\";a:33:{s:4:\"name\";s:5:\"Tests\";s:13:\"singular_name\";s:4:\"Test\";s:9:\"menu_name\";s:5:\"Tests\";s:9:\"all_items\";s:14:\"Tous les Tests\";s:9:\"edit_item\";s:13:\"Modifier test\";s:9:\"view_item\";s:9:\"Voir test\";s:10:\"view_items\";s:10:\"Voir Tests\";s:12:\"add_new_item\";s:12:\"Ajouter test\";s:7:\"add_new\";s:12:\"Ajouter test\";s:8:\"new_item\";s:12:\"Nouveau test\";s:17:\"parent_item_colon\";s:14:\"test parent :\";s:12:\"search_items\";s:16:\"Rechercher Tests\";s:9:\"not_found\";s:19:\"Aucun tests trouvé\";s:18:\"not_found_in_trash\";s:37:\"Aucun tests trouvé dans la corbeille\";s:8:\"archives\";s:17:\"Archives des test\";s:10:\"attributes\";s:18:\"Attributs des test\";s:14:\"featured_image\";s:0:\"\";s:18:\"set_featured_image\";s:0:\"\";s:21:\"remove_featured_image\";s:0:\"\";s:18:\"use_featured_image\";s:0:\"\";s:16:\"insert_into_item\";s:18:\"Insérer dans test\";s:21:\"uploaded_to_this_item\";s:24:\"Téléversé sur ce test\";s:17:\"filter_items_list\";s:22:\"Filtrer la liste tests\";s:14:\"filter_by_date\";s:22:\"Filtrer tests par date\";s:21:\"items_list_navigation\";s:30:\"Navigation dans la liste Tests\";s:10:\"items_list\";s:11:\"Liste Tests\";s:14:\"item_published\";s:13:\"test publié.\";s:24:\"item_published_privately\";s:23:\"test publié en privé.\";s:22:\"item_reverted_to_draft\";s:27:\"test repassé en brouillon.\";s:14:\"item_scheduled\";s:15:\"test planifié.\";s:12:\"item_updated\";s:17:\"test mis à jour.\";s:9:\"item_link\";s:9:\"Lien test\";s:21:\"item_link_description\";s:21:\"Un lien vers un test.\";}s:11:\"description\";s:0:\"\";s:6:\"public\";b:1;s:12:\"hierarchical\";b:0;s:19:\"exclude_from_search\";b:0;s:18:\"publicly_queryable\";b:1;s:7:\"show_ui\";b:1;s:12:\"show_in_menu\";b:1;s:17:\"admin_menu_parent\";s:0:\"\";s:17:\"show_in_admin_bar\";b:1;s:17:\"show_in_nav_menus\";b:1;s:12:\"show_in_rest\";b:1;s:9:\"rest_base\";s:0:\"\";s:14:\"rest_namespace\";s:5:\"wp/v2\";s:21:\"rest_controller_class\";s:24:\"WP_REST_Posts_Controller\";s:13:\"menu_position\";s:0:\"\";s:9:\"menu_icon\";a:2:{s:4:\"type\";s:9:\"dashicons\";s:5:\"value\";s:20:\"dashicons-admin-post\";}s:19:\"rename_capabilities\";b:0;s:24:\"singular_capability_name\";s:4:\"post\";s:22:\"plural_capability_name\";s:5:\"posts\";s:8:\"supports\";a:4:{i:0;s:5:\"title\";i:1;s:6:\"editor\";i:2;s:9:\"thumbnail\";i:3;s:13:\"custom-fields\";}s:10:\"taxonomies\";a:3:{i:0;s:22:\"elementor_library_type\";i:1;s:9:\"categorie\";i:2;s:6:\"format\";}s:11:\"has_archive\";b:0;s:16:\"has_archive_slug\";s:0:\"\";s:7:\"rewrite\";a:4:{s:17:\"permalink_rewrite\";s:13:\"post_type_key\";s:10:\"with_front\";s:1:\"1\";s:5:\"feeds\";s:1:\"0\";s:5:\"pages\";s:1:\"1\";}s:9:\"query_var\";s:13:\"post_type_key\";s:14:\"query_var_name\";s:0:\"\";s:10:\"can_export\";b:1;s:16:\"delete_with_user\";b:0;s:20:\"register_meta_box_cb\";s:0:\"\";s:16:\"enter_title_here\";s:0:\"\";}','Tests','tests','trash','closed','closed','','post_type_66f1900f1d7c2__trashed','','','2024-09-26 04:36:24','2024-09-26 02:36:24','',0,'http://motaphoto.local/?post_type=acf-post-type&#038;p=125',0,'acf-post-type','',0);
+INSERT INTO `wp_posts` VALUES (126,1,'2024-09-23 17:59:26','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 17:59:26','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=test&p=126',0,'test','',0);
+INSERT INTO `wp_posts` VALUES (127,1,'2024-09-23 18:01:33','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 18:01:33','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=test&p=127',0,'test','',0);
+INSERT INTO `wp_posts` VALUES (128,1,'2024-09-23 18:02:52','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','closed','closed','','','','','2024-09-23 18:02:52','0000-00-00 00:00:00','',0,'http://motaphoto.local/?post_type=test&p=128',0,'test','',0);
+INSERT INTO `wp_posts` VALUES (129,1,'2024-09-23 18:04:02','2024-09-23 16:04:02','','blabla','','publish','closed','closed','','blabla','','','2024-09-23 18:04:03','2024-09-23 16:04:03','',0,'http://motaphoto.local/?post_type=test&#038;p=129',0,'test','',0);
+INSERT INTO `wp_posts` VALUES (130,1,'2020-09-26 04:41:26','2020-09-26 02:41:26','','Et bon anniversaire !','','publish','closed','closed','','et-bon-anniversaire','','','2024-09-26 04:42:12','2024-09-26 02:42:12','',0,'http://motaphoto.local/?post_type=photo&#038;p=130',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (131,1,'2021-09-26 04:43:34','2021-09-26 02:43:34','','Let\'s party!','','publish','closed','closed','','lets-party','','','2024-09-26 04:43:47','2024-09-26 02:43:47','',0,'http://motaphoto.local/?post_type=photo&#038;p=131',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (132,1,'2019-09-26 04:44:58','2019-09-26 02:44:58','','Tout est installé','','publish','closed','closed','','tout-est-installe','','','2024-09-26 04:45:09','2024-09-26 02:45:09','',0,'http://motaphoto.local/?post_type=photo&#038;p=132',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (133,1,'2020-09-26 04:47:24','2020-09-26 02:47:24','','Vers l\'éternité','','publish','closed','closed','','vers-leternite','','','2024-09-26 04:47:40','2024-09-26 02:47:40','',0,'http://motaphoto.local/?post_type=photo&#038;p=133',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (134,1,'2021-09-26 04:48:22','2021-09-26 02:48:22','','Embrassez la mariée','','publish','closed','closed','','embrassez-la-mariee','','','2024-09-26 04:48:42','2024-09-26 02:48:42','',0,'http://motaphoto.local/?post_type=photo&#038;p=134',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (135,1,'2020-09-26 04:52:09','2020-09-26 02:52:09','','Dansons ensemble','','publish','closed','closed','','dansons-ensemble','','','2024-09-26 04:52:15','2024-09-26 02:52:15','',0,'http://motaphoto.local/?post_type=photo&#038;p=135',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (136,1,'2019-09-26 05:47:14','2019-09-26 03:47:14','','Le menu','','publish','closed','closed','','le-menu','','','2024-09-26 05:47:27','2024-09-26 03:47:27','',0,'http://motaphoto.local/?post_type=photo&#038;p=136',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (137,1,'2021-09-26 05:48:37','2021-09-26 03:48:37','','Au bal masqué','','publish','closed','closed','','au-bal-masque','','','2024-09-26 05:58:42','2024-09-26 03:58:42','',0,'http://motaphoto.local/?post_type=photo&#038;p=137',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (138,1,'2022-09-26 05:59:42','2022-09-26 03:59:42','','Let\'s dance!','','publish','closed','closed','','lets-dance','','','2024-09-26 06:00:53','2024-09-26 04:00:53','',0,'http://motaphoto.local/?post_type=photo&#038;p=138',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (139,1,'2022-09-26 06:02:05','2022-09-26 04:02:05','','Jour de match','','publish','closed','closed','','jour-de-match','','','2024-09-26 06:05:20','2024-09-26 04:05:20','',0,'http://motaphoto.local/?post_type=photo&#038;p=139',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (140,1,'2022-09-26 06:07:45','2022-09-26 04:07:45','','Préparation','','publish','closed','closed','','preparation','','','2024-09-26 06:07:53','2024-09-26 04:07:53','',0,'http://motaphoto.local/?post_type=photo&#038;p=140',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (141,1,'2022-09-26 06:08:52','2022-09-26 04:08:52','','Bière ou eau plate ?','','publish','closed','closed','','biere-ou-eau-plate','','','2024-09-26 06:10:17','2024-09-26 04:10:17','',0,'http://motaphoto.local/?post_type=photo&#038;p=141',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (142,1,'2022-09-26 06:10:57','2022-09-26 04:10:57','','Bouquet final','','publish','closed','closed','','bouquet-final','','','2024-09-26 06:14:52','2024-09-26 04:14:52','',0,'http://motaphoto.local/?post_type=photo&#038;p=142',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (143,1,'2022-09-26 06:43:28','2022-09-26 04:43:28','','Du soir au matin','','publish','closed','closed','','du-soir-au-matin','','','2024-09-30 17:48:41','2024-09-30 15:48:41','',0,'http://motaphoto.local/?post_type=photo&#038;p=143',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (144,1,'2022-09-26 06:59:28','2022-09-26 04:59:28','','Team mariée','','publish','closed','closed','','team-mariee','','','2024-10-13 11:41:22','2024-10-13 09:41:22','',0,'http://motaphoto.local/?post_type=photo&#038;p=144',0,'photo','',0);
+INSERT INTO `wp_posts` VALUES (146,1,'2024-10-06 07:29:18','2024-10-06 05:29:18','','Photo','','trash','closed','closed','','photo__trashed','','','2024-10-06 09:34:54','2024-10-06 07:34:54','',0,'http://motaphoto.local/?page_id=146',0,'page','',0);
+INSERT INTO `wp_posts` VALUES (147,1,'2024-10-06 07:29:18','2024-10-06 05:29:18','','Photo','','inherit','closed','closed','','146-revision-v1','','','2024-10-06 07:29:18','2024-10-06 05:29:18','',146,'http://motaphoto.local/?p=147',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (149,1,'2024-10-06 08:32:42','2024-10-06 06:32:42','','Photo','','inherit','closed','closed','','146-autosave-v1','','','2024-10-06 08:32:42','2024-10-06 06:32:42','',146,'http://motaphoto.local/?p=149',0,'revision','',0);
+INSERT INTO `wp_posts` VALUES (151,1,'2024-10-21 10:24:16','2024-10-21 08:24:16','','ACCEUIL','','inherit','closed','closed','','8-autosave-v1','','','2024-10-21 10:24:16','2024-10-21 08:24:16','',8,'http://motaphoto.local/?p=151',0,'revision','',0);
+/*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wp_term_relationships`
+--
+
+DROP TABLE IF EXISTS `wp_term_relationships`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `wp_term_relationships` (
+  `object_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `term_order` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`object_id`,`term_taxonomy_id`),
+  KEY `term_taxonomy_id` (`term_taxonomy_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wp_term_relationships`
+--
+
+LOCK TABLES `wp_term_relationships` WRITE;
+/*!40000 ALTER TABLE `wp_term_relationships` DISABLE KEYS */;
+INSERT INTO `wp_term_relationships` VALUES (1,1,0);
+INSERT INTO `wp_term_relationships` VALUES (6,2,0);
+INSERT INTO `wp_term_relationships` VALUES (84,6,0);
+INSERT INTO `wp_term_relationships` VALUES (85,6,0);
+INSERT INTO `wp_term_relationships` VALUES (87,6,0);
+INSERT INTO `wp_term_relationships` VALUES (88,7,0);
+INSERT INTO `wp_term_relationships` VALUES (89,7,0);
+INSERT INTO `wp_term_relationships` VALUES (90,7,0);
+INSERT INTO `wp_term_relationships` VALUES (119,8,0);
+INSERT INTO `wp_term_relationships` VALUES (119,12,0);
+INSERT INTO `wp_term_relationships` VALUES (130,8,0);
+INSERT INTO `wp_term_relationships` VALUES (130,12,0);
+INSERT INTO `wp_term_relationships` VALUES (131,9,0);
+INSERT INTO `wp_term_relationships` VALUES (131,12,0);
+INSERT INTO `wp_term_relationships` VALUES (132,10,0);
+INSERT INTO `wp_term_relationships` VALUES (132,13,0);
+INSERT INTO `wp_term_relationships` VALUES (133,10,0);
+INSERT INTO `wp_term_relationships` VALUES (133,13,0);
+INSERT INTO `wp_term_relationships` VALUES (134,10,0);
+INSERT INTO `wp_term_relationships` VALUES (134,13,0);
+INSERT INTO `wp_term_relationships` VALUES (135,10,0);
+INSERT INTO `wp_term_relationships` VALUES (135,12,0);
+INSERT INTO `wp_term_relationships` VALUES (136,10,0);
+INSERT INTO `wp_term_relationships` VALUES (136,12,0);
+INSERT INTO `wp_term_relationships` VALUES (137,9,0);
+INSERT INTO `wp_term_relationships` VALUES (137,13,0);
+INSERT INTO `wp_term_relationships` VALUES (138,10,0);
+INSERT INTO `wp_term_relationships` VALUES (138,12,0);
+INSERT INTO `wp_term_relationships` VALUES (139,11,0);
+INSERT INTO `wp_term_relationships` VALUES (139,12,0);
+INSERT INTO `wp_term_relationships` VALUES (140,9,0);
+INSERT INTO `wp_term_relationships` VALUES (140,12,0);
+INSERT INTO `wp_term_relationships` VALUES (141,9,0);
+INSERT INTO `wp_term_relationships` VALUES (141,12,0);
+INSERT INTO `wp_term_relationships` VALUES (142,10,0);
+INSERT INTO `wp_term_relationships` VALUES (142,13,0);
+INSERT INTO `wp_term_relationships` VALUES (143,10,0);
+INSERT INTO `wp_term_relationships` VALUES (143,13,0);
+INSERT INTO `wp_term_relationships` VALUES (144,10,0);
+INSERT INTO `wp_term_relationships` VALUES (144,13,0);
+/*!40000 ALTER TABLE `wp_term_relationships` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wp_term_taxonomy`
+--
+
+DROP TABLE IF EXISTS `wp_term_taxonomy`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `wp_term_taxonomy` (
+  `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `taxonomy` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `description` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `parent` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `count` bigint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`term_taxonomy_id`),
+  UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
+  KEY `taxonomy` (`taxonomy`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wp_term_taxonomy`
+--
+
+LOCK TABLES `wp_term_taxonomy` WRITE;
+/*!40000 ALTER TABLE `wp_term_taxonomy` DISABLE KEYS */;
+INSERT INTO `wp_term_taxonomy` VALUES (1,1,'category','',0,1);
+INSERT INTO `wp_term_taxonomy` VALUES (2,2,'wp_theme','',0,1);
+INSERT INTO `wp_term_taxonomy` VALUES (6,6,'nav_menu','',0,3);
+INSERT INTO `wp_term_taxonomy` VALUES (7,7,'nav_menu','',0,3);
+INSERT INTO `wp_term_taxonomy` VALUES (8,8,'categorie','Réception',0,2);
+INSERT INTO `wp_term_taxonomy` VALUES (9,9,'categorie','Concert',0,4);
+INSERT INTO `wp_term_taxonomy` VALUES (10,10,'categorie','Mariage',0,9);
+INSERT INTO `wp_term_taxonomy` VALUES (11,11,'categorie','Télévision',0,1);
+INSERT INTO `wp_term_taxonomy` VALUES (12,12,'format','Paysage',0,9);
+INSERT INTO `wp_term_taxonomy` VALUES (13,13,'format','Portrait',0,7);
+INSERT INTO `wp_term_taxonomy` VALUES (14,14,'format','',0,0);
+/*!40000 ALTER TABLE `wp_term_taxonomy` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wp_termmeta`
+--
+
+DROP TABLE IF EXISTS `wp_termmeta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `wp_termmeta` (
+  `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci,
+  PRIMARY KEY (`meta_id`),
+  KEY `term_id` (`term_id`),
+  KEY `meta_key` (`meta_key`(191))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wp_termmeta`
+--
+
+LOCK TABLES `wp_termmeta` WRITE;
+/*!40000 ALTER TABLE `wp_termmeta` DISABLE KEYS */;
+/*!40000 ALTER TABLE `wp_termmeta` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wp_terms`
+--
+
+DROP TABLE IF EXISTS `wp_terms`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `wp_terms` (
+  `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `slug` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `term_group` bigint(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`term_id`),
+  KEY `slug` (`slug`(191)),
+  KEY `name` (`name`(191))
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wp_terms`
+--
+
+LOCK TABLES `wp_terms` WRITE;
+/*!40000 ALTER TABLE `wp_terms` DISABLE KEYS */;
+INSERT INTO `wp_terms` VALUES (1,'Uncategorized','uncategorized',0);
+INSERT INTO `wp_terms` VALUES (2,'twentytwentyfour-child','twentytwentyfour-child',0);
+INSERT INTO `wp_terms` VALUES (6,'En-tête','en-tete',0);
+INSERT INTO `wp_terms` VALUES (7,'Pied-de-page','pied-de-page',0);
+INSERT INTO `wp_terms` VALUES (8,'Réception','reception',0);
+INSERT INTO `wp_terms` VALUES (9,'Concert','concert',0);
+INSERT INTO `wp_terms` VALUES (10,'Mariage','mariage',0);
+INSERT INTO `wp_terms` VALUES (11,'Télévision','television',0);
+INSERT INTO `wp_terms` VALUES (12,'Paysage','paysage',0);
+INSERT INTO `wp_terms` VALUES (13,'Portrait','portrait',0);
+INSERT INTO `wp_terms` VALUES (14,'Testouille','testouille',0);
+/*!40000 ALTER TABLE `wp_terms` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wp_usermeta`
+--
+
+DROP TABLE IF EXISTS `wp_usermeta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `wp_usermeta` (
+  `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci,
+  PRIMARY KEY (`umeta_id`),
+  KEY `user_id` (`user_id`),
+  KEY `meta_key` (`meta_key`(191))
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wp_usermeta`
+--
+
+LOCK TABLES `wp_usermeta` WRITE;
+/*!40000 ALTER TABLE `wp_usermeta` DISABLE KEYS */;
+INSERT INTO `wp_usermeta` VALUES (1,1,'nickname','Nathalie');
+INSERT INTO `wp_usermeta` VALUES (2,1,'first_name','');
+INSERT INTO `wp_usermeta` VALUES (3,1,'last_name','');
+INSERT INTO `wp_usermeta` VALUES (4,1,'description','');
+INSERT INTO `wp_usermeta` VALUES (5,1,'rich_editing','true');
+INSERT INTO `wp_usermeta` VALUES (6,1,'syntax_highlighting','true');
+INSERT INTO `wp_usermeta` VALUES (7,1,'comment_shortcuts','false');
+INSERT INTO `wp_usermeta` VALUES (8,1,'admin_color','fresh');
+INSERT INTO `wp_usermeta` VALUES (9,1,'use_ssl','0');
+INSERT INTO `wp_usermeta` VALUES (10,1,'show_admin_bar_front','true');
+INSERT INTO `wp_usermeta` VALUES (11,1,'locale','');
+INSERT INTO `wp_usermeta` VALUES (12,1,'wp_capabilities','a:1:{s:13:\"administrator\";b:1;}');
+INSERT INTO `wp_usermeta` VALUES (13,1,'wp_user_level','10');
+INSERT INTO `wp_usermeta` VALUES (14,1,'dismissed_wp_pointers','');
+INSERT INTO `wp_usermeta` VALUES (15,1,'show_welcome_panel','1');
+INSERT INTO `wp_usermeta` VALUES (16,1,'session_tokens','a:1:{s:64:\"742c9513aa542039f902d20bc2268a6071edc01635f1da95d431cb6be810216a\";a:4:{s:10:\"expiration\";i:1732078084;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:111:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\";s:5:\"login\";i:1731905284;}}');
+INSERT INTO `wp_usermeta` VALUES (17,1,'wp_dashboard_quick_press_last_post_id','4');
+INSERT INTO `wp_usermeta` VALUES (18,1,'wp_persisted_preferences','a:4:{s:4:\"core\";a:2:{s:26:\"isComplementaryAreaVisible\";b:1;s:10:\"openPanels\";a:3:{i:0;s:11:\"post-status\";i:1;s:21:\"taxonomy-panel-format\";i:2;s:24:\"taxonomy-panel-categorie\";}}s:9:\"_modified\";s:24:\"2024-10-14T04:42:42.489Z\";s:14:\"core/edit-site\";a:1:{s:12:\"welcomeGuide\";b:0;}s:14:\"core/edit-post\";a:1:{s:12:\"welcomeGuide\";b:0;}}');
+INSERT INTO `wp_usermeta` VALUES (19,1,'elementor_introduction','a:1:{s:27:\"ai-get-started-announcement\";b:1;}');
+INSERT INTO `wp_usermeta` VALUES (20,1,'wp_user-settings','libraryContent=browse&mfold=o');
+INSERT INTO `wp_usermeta` VALUES (21,1,'wp_user-settings-time','1725876523');
+INSERT INTO `wp_usermeta` VALUES (22,1,'nav_menu_recently_edited','6');
+INSERT INTO `wp_usermeta` VALUES (23,1,'managenav-menuscolumnshidden','a:4:{i:0;s:11:\"link-target\";i:1;s:15:\"title-attribute\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";}');
+INSERT INTO `wp_usermeta` VALUES (24,1,'metaboxhidden_nav-menus','a:3:{i:0;s:32:\"add-post-type-e-floating-buttons\";i:1;s:12:\"add-post_tag\";i:2;s:15:\"add-post_format\";}');
+INSERT INTO `wp_usermeta` VALUES (25,1,'closedpostboxes_cpt-ui_page_cptui_manage_taxonomies','a:0:{}');
+INSERT INTO `wp_usermeta` VALUES (26,1,'metaboxhidden_cpt-ui_page_cptui_manage_taxonomies','a:0:{}');
+INSERT INTO `wp_usermeta` VALUES (27,1,'manageedit-acf-post-typecolumnshidden','a:1:{i:0;s:7:\"acf-key\";}');
+INSERT INTO `wp_usermeta` VALUES (28,1,'acf_user_settings','a:2:{s:19:\"post-type-first-run\";b:1;s:20:\"taxonomies-first-run\";b:1;}');
+INSERT INTO `wp_usermeta` VALUES (29,1,'elementor_dismissed_editor_notices','a:1:{i:0;s:20:\"image_optimizer_hint\";}');
+INSERT INTO `wp_usermeta` VALUES (30,1,'closedpostboxes_photo','a:0:{}');
+INSERT INTO `wp_usermeta` VALUES (31,1,'metaboxhidden_photo','a:0:{}');
+INSERT INTO `wp_usermeta` VALUES (32,1,'manageedit-acf-taxonomycolumnshidden','a:1:{i:0;s:7:\"acf-key\";}');
+INSERT INTO `wp_usermeta` VALUES (33,1,'closedpostboxes_acf-taxonomy','a:0:{}');
+INSERT INTO `wp_usermeta` VALUES (34,1,'metaboxhidden_acf-taxonomy','a:1:{i:0;s:7:\"slugdiv\";}');
+INSERT INTO `wp_usermeta` VALUES (35,1,'closedpostboxes_acf-post-type','a:0:{}');
+INSERT INTO `wp_usermeta` VALUES (36,1,'metaboxhidden_acf-post-type','a:2:{i:0;s:21:\"acf-advanced-settings\";i:1;s:7:\"slugdiv\";}');
+INSERT INTO `wp_usermeta` VALUES (37,1,'elementor_admin_notices','a:1:{s:20:\"design_not_appearing\";a:2:{s:9:\"is_viewed\";b:0;s:4:\"meta\";a:1:{s:7:\"version\";s:6:\"3.25.4\";}}}');
+/*!40000 ALTER TABLE `wp_usermeta` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wp_users`
+--
+
+DROP TABLE IF EXISTS `wp_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `wp_users` (
+  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_login` varchar(60) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_pass` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_nicename` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_email` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_url` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `user_activation_key` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_status` int(11) NOT NULL DEFAULT '0',
+  `display_name` varchar(250) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`ID`),
+  KEY `user_login_key` (`user_login`),
+  KEY `user_nicename` (`user_nicename`),
+  KEY `user_email` (`user_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wp_users`
+--
+
+LOCK TABLES `wp_users` WRITE;
+/*!40000 ALTER TABLE `wp_users` DISABLE KEYS */;
+INSERT INTO `wp_users` VALUES (1,'Nathalie','$P$BF6.JvSbTdHrXkcGwkm6weRAH5TRcY/','nathalie','camy.nodream@hotmail.fr','http://motaphoto.local','2024-09-02 01:12:41','',0,'Nathalie');
+/*!40000 ALTER TABLE `wp_users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-11-18 10:59:05
