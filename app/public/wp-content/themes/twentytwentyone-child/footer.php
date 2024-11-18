@@ -38,31 +38,33 @@
     <?php else : ?>
         <p style="color: red;">No footer menu assigned</p>
     <?php endif; ?>
-    <!-- Lightbox structure -->
-    <div id="lightbox" class="lightbox" style="display: none;">
-        <div class="lightbox-content">
-            <!-- Bouton de fermeture -->
-            <span class="closelightbox">&times;</span>
-            
-            <!-- Flexbox contenant les flèches et l'image -->
-            <div class="lightbox-flex-container">
-                <!-- Flèche de navigation précédente -->
-                <a href="#" class="nav-linklight prev-linklight" id="prev-link">&larr;    <p>Précédente</p></a>
+<!-- Lightbox structure -->
+<div id="lightbox" class="lightbox" style="display: none;">
+    <div class="lightbox-content">
+        <!-- Bouton de fermeture -->
+        <button class="closelightbox">&times;</button>
+        <!-- Flexbox contenant les flèches et l'image -->
+        <div class="lightbox-flex-container">
 
+            <!-- Flèche de navigation précédente -->
+            <button class="nav-linklight prev-linklight" id="prev-linklight">&larr; <p>Précédente</p></button>
+            <div class="image-info-container">
                 <!-- Image de la lightbox -->
                 <img src="" id="lightbox-image" alt="Lightbox Image">
 
-                <!-- Flèche de navigation suivante -->
-                <a href="#" class="nav-linklight next-linklight" id="next-link"><p>Suivante</p>    &rarr;</a>
+                <!-- Informations de la lightbox -->
+                <div class="lightbox-info">
+                    <span class="photo-ref" id="lightbox-ref"></span>
+                    <span class="photo-category" id="lightbox-category"></span>
+                </div>
             </div>
 
-            <!-- Informations de la lightbox -->
-            <div class="lightbox-info">
-                <span class="photo-ref" id="lightbox-ref">Référence non disponible</span>
-                <span class="photo-category" id="lightbox-category">Catégorie non disponible</span>
-            </div>
+            <!-- Flèche de navigation suivante -->
+            <button class="nav-linklight next-linklight" id="next-linklight"><p>Suivante</p> &rarr;</button>
         </div>
     </div>
+</div>
+
 
 <?php wp_footer(); ?>
 <?php get_template_part('template_parts/modal-contact'); ?>

@@ -1,57 +1,69 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM chargé");
+    console.log("DOM chargé et script prêt à s'exécuter.");
 
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxRef = document.getElementById('lightbox-ref');
-    const lightboxCategory = document.getElementById('lightbox-category');
-    
-    if (!lightbox || !lightboxImage || !lightboxRef || !lightboxCategory) {
-        console.error("La lightbox ou ses éléments manquent dans le DOM.");
+    // Sélectionner tous les éléments qui déclenchent la lightbox
+    const imageLinks = document.querySelectorAll('.lightbox-trigger');
+    console.log("Nombre de liens d'image trouvés :", imageLinks.length);
+
+    if (imageLinks.length === 0) {
+        console.warn("Aucun lien d'image trouvé. Vérifiez que les sélecteurs de liens sont corrects.");
         return;
     }
 
-    // Sélectionner toutes les icônes de plein écran
-    const fullscreenIcons = document.querySelectorAll('.lightbox-trigger');
+    // Créer un tableau pour stocker les URLs des images
+    const images = [];
 
-    // Ajouter un événement de clic à chaque icône pour déclencher la lightbox
-    fullscreenIcons.forEach(icon => {
-        icon.addEventListener('click', function(event) {
-            event.preventDefault(); // Empêche le comportement par défaut du lien si nécessaire
-            console.log("Icône plein écran cliquée");
+    // Itérer sur chaque élément pour ajouter les URLs dans le tableau
+    imageLinks.forEach(link => {
+        const photoUrl = link.getAttribute('data-photo-url');
+        if (photoUrl) {
+            images.push(photoUrl);
+        }
+    });
 
-            const photoUrl = icon.getAttribute('data-photo-url');
-            const photoTitle = icon.getAttribute('data-photo-title');
-            const photoCategory = icon.getAttribute('data-photo-category');
+    console.log("Tableau des URLs d'image :", images);
 
-            // Vérifie les valeurs extraites des attributs data-*
-            console.log("URL de la photo:", photoUrl);
-            console.log("Titre de la photo:", photoTitle);
-            console.log("Catégorie de la photo:", photoCategory);
+    // Ajouter un événement de clic à chaque élément pour ouvrir la lightbox
+    imageLinks.forEach((link, index) => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            console.log(`Image cliquée : Index ${index}, URL : ${images[index]}`);
 
-            // Ouvre la lightbox
-            openLightbox(photoUrl, photoTitle, photoCategory);
+            // Appeler la fonction pour ouvrir la lightbox avec l'URL de l'image
+            openLightbox(images[index], link.getAttribute('data-photo-title'), link.getAttribute('data-photo-category'));
         });
     });
 
     // Fonction pour ouvrir la lightbox
     function openLightbox(photoUrl, photoTitle, photoCategory) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxRef = document.getElementById('lightbox-ref');
+        const lightboxCategory = document.getElementById('lightbox-category');
+
+        if (!lightbox || !lightboxImage || !lightboxRef || !lightboxCategory) {
+            console.error("La lightbox ou ses éléments ne sont pas présents dans le DOM.");
+            return;
+        }
+
         lightboxImage.src = photoUrl;
         lightboxRef.textContent = photoTitle || "Référence non disponible";
         lightboxCategory.textContent = photoCategory || "Catégorie non disponible";
         lightbox.style.display = 'flex';
-        console.log("Lightbox affichée avec l'URL:", photoUrl);
+        console.log("Lightbox ouverte avec l'image :", photoUrl);
     }
 
-    // Ferme la lightbox
+    // Fermer la lightbox
     const closeBtn = document.querySelector('.closelightbox');
     if (closeBtn) {
-        closeBtn.onclick = function() {
-            lightbox.style.display = 'none';
-            console.log("Lightbox fermée");
-        };
+        closeBtn.addEventListener('click', function() {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox) {
+                lightbox.style.display = 'none';
+                console.log("Lightbox fermée.");
+            }
+        });
     } else {
-        console.error("Le bouton de fermeture .closelightbox n'a pas été trouvé dans le DOM.");
+        console.error("Le bouton de fermeture .closelightbox n'a pas été trouvé.");
     }
 });
-

@@ -80,3 +80,95 @@ Stack trace:
 [04-Nov-2024 09:07:41 UTC] PHP Parse error:  syntax error, unexpected token ")", expecting variable in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\functions.php on line 178
 [04-Nov-2024 09:07:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\localsites\motaphoto\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
 [04-Nov-2024 09:07:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in D:\localsites\motaphoto\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[18-Nov-2024 07:47:42 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:47:42 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:49:57 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:49:57 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:51:28 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:51:28 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:51:31 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:51:31 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:51:36 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:51:36 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:51:38 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:51:38 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:52:21 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:52:21 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:53:25 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:53:25 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:54:02 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 07:54:02 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 61
+[18-Nov-2024 08:08:45 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:08:45 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:17:22 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:17:22 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:19:44 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:19:44 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:20:53 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:20:53 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:20:55 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:20:55 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:26:07 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:26:07 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:35:47 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:35:47 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:38:02 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:38:02 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:38:49 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:38:49 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:18 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:18 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:45 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:45 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:47 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:47 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:54 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:54 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:57 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:40:57 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:41:03 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:41:03 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:41:08 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:41:08 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:42:08 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:42:08 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:43:34 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:43:34 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:43:49 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:43:49 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:04 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:04 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:13 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:13 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:14 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:14 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:18 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:18 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:26 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:44:26 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:45:05 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:45:05 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:45:46 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:45:46 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:46:01 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:46:01 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:49:04 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:49:04 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:49:20 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:49:20 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:50:21 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:50:21 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:52:21 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:52:21 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:53:16 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:53:16 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:53:43 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:53:43 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:53:46 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:53:46 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:58:44 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:58:44 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:58:44 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 08:58:44 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 09:02:31 UTC] PHP Warning:  Undefined variable $term in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62
+[18-Nov-2024 09:02:31 UTC] PHP Warning:  Attempt to read property "name" on null in D:\localsites\motaphoto\app\public\wp-content\themes\twentytwentyone-child\footer.php on line 62

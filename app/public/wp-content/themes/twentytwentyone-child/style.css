@@ -707,6 +707,7 @@ p {
 .lightbox {
     display: none;
     position: fixed;
+    flex-direction: column;
     top: 0;
     left: 0;
     width: 100%;
@@ -721,8 +722,8 @@ p {
 /* Contenu de la lightbox */
 .lightbox-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -734,18 +735,12 @@ p {
 
 /* Bouton de fermeture */
 .closelightbox {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     font-size: 30px;
     color: white;
     cursor: pointer;
     transition: color 0.3s;
+    margin-left: auto;
     z-index: 1001;
-}
-
-.closelightbox:hover {
-    color: #ff0000; /* Rouge pour indiquer le survol */
 }
 
 /* Flexbox qui contient les flèches et l'image */
@@ -759,37 +754,11 @@ p {
 }
 
 #lightbox-image {
-    max-width: 100%; /* Ajuste la taille de l'image pour laisser de l'espace pour les flèches */
-    max-height: 80vh; /* Limite la hauteur pour un meilleur ajustement */
-    border-radius: 0;
+    max-width: 100%;
+    max-height: 80vh;
     object-fit: contain;
 }
 
-/* Styles pour les liens de navigation (flèches) */
-.nav-linklight {
-    display: flex;
-    align-items: center;
-    font-size: 16px; /* Taille du texte */
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px; /* Ajustez selon vos besoins */
-    border-radius: 50%; /* Forme arrondie pour le bouton */
-    transition: background-color 0.3s;
-    cursor: pointer;
-    gap: 8px; /* Ajoute un espace de 8px entre le texte et la flèche */
-}
-
-.prev-linklight {
-    margin-left: 20px;
-    flex-direction: row-reverse; /* Inverse l'ordre : texte suivi de la flèche */
-}
-
-.next-linklight {
-    margin-right: 20px;
-}
-
-/* Informations de la lightbox */
 .lightbox-info {
     font-family: Space Mono;
     font-weight: 400;
@@ -799,8 +768,39 @@ p {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 100%; /* Empêche de dépasser la largeur de l'image */
     box-sizing: border-box;
-    z-index: 1001;
+}
+
+/* Styles pour les liens de navigation (flèches) */
+.nav-linklight {
+    display: flex;
+    align-items: center;
+    font-family: Space Mono;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    padding: 20px; /* Ajustez selon vos besoins */
+    cursor: pointer;
+    gap: 8px; /* Ajoute un espace de 8px entre le texte et la flèche */
+}
+
+.prev-linklight {
+    padding-right: auto;
+    flex-direction: row-reverse; /* Inverse l'ordre : texte suivi de la flèche */
+    text-decoration: none !important;
+}
+
+.next-linklight {
+    padding-left: auto;
+    text-decoration: none !important;
+}
+
+.nav-linklight:focus,
+.nav-linklight:active {
+    outline: none !important; /* Retirer le contour bleu ou foncé */
+    box-shadow: none !important; /* Retirer les ombres ou effets après clic */
 }
 
 /* Styles généraux pour tous les écrans */
