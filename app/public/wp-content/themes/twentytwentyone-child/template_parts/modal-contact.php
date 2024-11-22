@@ -6,7 +6,6 @@
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
-
   <div class="modal-content">
     <div class="modal-title-wrapper">
       <h1 class="modal-title">
@@ -19,7 +18,6 @@
       </h1>
     </div>
         <?php
-        // On insère le formulaire
         echo do_shortcode('[contact-form-7 id="104e5d2" title="Contactez-moi"]');
         ?>
   </div>

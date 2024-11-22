@@ -15,7 +15,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
     <div class="single-photo-container">
         <div class="bloc-top" >
-            <!-- Bloc de gauche -->
             <div class="left-info-block">
                 <h2><?php the_title(); ?></h2>
                 <p>REFERENCE : <?php the_field('reference');?></p>
@@ -23,8 +22,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <p>FORMAT : <?php the_terms($post->ID, 'format');?></p>
                 <p>ANNÉE : <?php echo get_the_date();?></p>
             </div>
-
-            <!-- Bloc de droite SI TU PARLES LA JE NE T'ENTENDS PAS :(-->
             <div class="right-photo-block ">
                 <a href="<?php echo esc_url(wp_get_attachment_url(get_post_thumbnail_id())); ?>"
                 class="photo-fullsize-link lightbox-trigger"
@@ -34,7 +31,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <?php the_post_thumbnail('large'); ?></a>
             </div>
         </div>
-        <!-- Bloc du milieu -->
         <div class=middle-box>
             <div class="bottom-interactions-container">
                 <div class="contact-left">
@@ -48,7 +44,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         // Obtenir le précédent et le suivant
         $prev_post = get_adjacent_post(false, '', true); // True pour précédent
         $next_post = get_adjacent_post(false, '', false); // False pour suivant
-
         // Si pas de précédent, retourner à la dernière photo
         if (empty($prev_post)) {
             $prev_post = get_posts(array(
@@ -57,7 +52,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 'order' => 'DESC'
             ))[0];
         }
-
         // Si pas de suivant, retourner à la première photo
         if (empty($next_post)) {
             $next_post = get_posts(array(
@@ -67,7 +61,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             ))[0];
         }
         ?>
-
         <div class="navigation-links">
             <a href="<?php echo get_permalink($prev_post); ?>" class="nav-link prev-link">
                 &larr;
@@ -79,7 +72,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             </a>
         </div>
     </div>
-        <!--- Bloc du bas -->
     <div class="bottom-box">
         <h3>Vous aimerez aussi</h3>
         <div class="photo-grid">
@@ -87,7 +79,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             $terms = wp_get_post_terms(get_the_ID(), 'categorie');
             if (!empty($terms) && !is_wp_error($terms)) {
                 $term = $terms[0];
-
                 $args = array(
                     'post_type'      => 'photo',
                     'posts_per_page' => 2,
@@ -101,10 +92,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     ),
                 );
                 $related_photos = new WP_Query($args);
-
                 if ($related_photos->have_posts()) :
                     while ($related_photos->have_posts()) : $related_photos->the_post();
-
                         $photo_id = get_the_ID();
                         get_template_part('template_parts/photo_block', null, array('photo_id' => $photo_id));
                     endwhile;
@@ -114,7 +103,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             ?>
         </div>
     </div>
-
 <?php
 endwhile;
 endif;

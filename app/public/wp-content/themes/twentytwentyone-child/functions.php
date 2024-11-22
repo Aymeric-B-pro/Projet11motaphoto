@@ -3,26 +3,21 @@
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles() {
     
-    // Charger le fichier style.css du parent depuis la racine
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_script(
         'primary-navigation',
         get_template_directory_uri() . '/assets/js/primary-navigation.js',
-        array( 'jquery' ), // Ajouter d'autres dépendances si nécessaire
+        array( 'jquery' ), 
         wp_get_theme()->get( 'Version' ),
-        true // Charger en pied de page
+        true
     );
-    // Charger le style du thème enfant
     wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'), filemtime(get_stylesheet_directory() . '/style.css'));
 
-    // Charger les scripts du thème enfant
     wp_enqueue_script('child-theme-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
     wp_localize_script('child-theme-scripts', 'child_style_js', array(
         'ajax_url' => admin_url('admin-ajax.php')
     ));
 }
-
-
 
 function enqueue_font_awesome() {
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
@@ -82,25 +77,19 @@ function get_random_photo_background() {
 
 function load_more_photos() {
     $paged = isset($_POST['page']) ? intval($_POST['page']) : 1;
-
-    // Requête pour récupérer toutes les photos disponibles
     $total_photos_query = new WP_Query(array(
         'post_type' => 'photo',
         'posts_per_page' => -1,
     ));
     $total_photos = $total_photos_query->found_posts;
-
-    // Requête principale avec pagination
     $args = array(
         'post_type'      => 'photo',
         'posts_per_page' => 8,
         'paged'          => $paged,
         'orderby'        => 'date',
-        'order'          => 'DESC',    // Du plus récent au plus ancien
+        'order'          => 'DESC', 
     );
-
     $photo_query = new WP_Query($args);
-
     if ($photo_query->have_posts()) {
         ob_start();
         while ($photo_query->have_posts()) {
@@ -116,7 +105,6 @@ function load_more_photos() {
     } else {
         wp_send_json_error('Aucune photo supplémentaire.');
     }
-
     wp_reset_postdata();
     wp_die();
 }
@@ -128,11 +116,10 @@ function filter_photos() {
     $format = isset($_POST['format']) ? intval($_POST['format']) : '';
     $date_order = isset($_POST['date_order']) ? sanitize_text_field($_POST['date_order']) : 'DESC';
     $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
-
     // Arguments de la requête principale
     $args = array(
         'post_type' => 'photo',
-        'posts_per_page' => 8, // Nombre de photos à charger par page
+        'posts_per_page' => 8,
         'paged' => $page,
         'orderby' => 'date',
         'order' => $date_order,
@@ -146,7 +133,6 @@ function filter_photos() {
             'terms'    => $category,
         );
     }
-
     if ($format) {
         $args['tax_query'][] = array(
             'taxonomy' => 'format',
@@ -154,15 +140,13 @@ function filter_photos() {
             'terms'    => $format,
         );
     }
-
     // Exécuter la requête WP_Query avec les arguments filtrés
     $photo_query = new WP_Query($args);
-
     // Compter le nombre total de photos pour gérer le bouton "Load More"
     $total_photos_query = new WP_Query(array(
         'post_type' => 'photo',
-        'posts_per_page' => -1, // Récupère tous les posts pour compter le total
-        'tax_query' => $args['tax_query'] ?? [], // Applique les filtres
+        'posts_per_page' => -1,
+        'tax_query' => $args['tax_query'] ?? [],
     ));
     $total_photos = $total_photos_query->found_posts;
 
@@ -171,19 +155,17 @@ function filter_photos() {
         ob_start();
         while ($photo_query->have_posts()) {
             $photo_query->the_post();
-            // Chargement du template pour chaque photo (ajuste selon ton thème)
             get_template_part('template_parts/photo_block', null, array('photo_id' => get_the_ID()));
         }
         $content = ob_get_clean();
         wp_send_json_success(array(
             'content' => $content,
             'total_photos' => $total_photos,
-            'photos_loaded' => $page * 8 // Nombre de photos chargées jusqu'à présent
+            'photos_loaded' => $page * 8
         ));
     } else {
         wp_send_json_error('Aucune photo trouvée.');
     }
-
     wp_reset_postdata();
     wp_die();
 }

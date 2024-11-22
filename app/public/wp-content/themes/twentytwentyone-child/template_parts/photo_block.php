@@ -15,17 +15,13 @@ if ($photo_id) {
         echo '<div class="image-container">';
         echo '<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_attr($photo_title) . '">';
 
-        // Icône œil avec lien vers la page single-photo
         echo '<span class="overlay-icon view-icon"><i class="fa fa-eye"></i></span>';
-
-        // Icône plein écran pour déclencher la lightbox avec attributs data-*
         echo '<span class="overlay-icon fullscreen-icon lightbox-trigger" ';
         echo 'data-photo-url="' . esc_url($thumbnail_url) . '" ';
         echo 'data-photo-title="' . esc_attr($photo_title) . '" ';
         echo 'data-photo-category="' . esc_attr($category_name) . '">';
         echo '&#x26F6;</span>';
 
-        // Informations sur la photo
         echo '<div class="photo-info">';
         echo '<span class="photo-ref">' . esc_html(get_field('reference', $photo_id)) . '</span>';
         echo '<span class="photo-category">' . $category_name . '</span>';

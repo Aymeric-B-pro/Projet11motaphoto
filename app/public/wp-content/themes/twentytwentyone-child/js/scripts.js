@@ -28,9 +28,6 @@ jQuery(document).ready(function($) {
         let category = $('#category-filter').val();
         let format = $('#format-filter').val();
         let dateOrder = $('#date-order').val() || 'DESC'; // Valeur par défaut pour le tri
-
-        console.log("Filtres appliqués:", { category, format, dateOrder, page });
-
         $.ajax({
             url: child_style_js.ajax_url,
             type: 'POST',
@@ -42,12 +39,9 @@ jQuery(document).ready(function($) {
                 page: page,
             },
             success: function(response) {
-                console.log('Réponse AJAX reçue:', response);
-
                 if (response.success) {
                     if (page === 1) $('.photo-grid').empty();
                     $('.photo-grid').append(response.data.content);
-
                     if (response.data.photos_loaded >= response.data.total_photos) {
                         $('#load-more').hide();
                     } else {
@@ -55,12 +49,11 @@ jQuery(document).ready(function($) {
                         $('#load-more').show();
                     }
                 } else {
-                    console.log('Aucune photo trouvée.');
                     $('#load-more').hide();
                 }
             },
             error: function(error) {
-                console.log('Erreur AJAX', error);
+                // Erreur AJAX gérée silencieusement sans log
             }
         });
     }
@@ -75,7 +68,6 @@ jQuery(document).ready(function($) {
     });
 });
 
-
 //Récupération Ref Photo
 jQuery(document).ready(function($) {
     $('.contactlink').on('click', function(event) {
@@ -84,11 +76,9 @@ jQuery(document).ready(function($) {
         $('input[name="your-subject"]').val(refPhoto);
         $('#myModal').fadeIn();
     });
-
     $('.close-button').on('click', function() {
         $('#myModal').fadeOut();
     });
-
     $(window).on('click', function(event) {
         if ($(event.target).is('#myModal')) {
             $('#myModal').fadeOut();
