@@ -1,0 +1,1027 @@
+/*
+Theme Name: Twenty Twenty-One Child
+Theme URI: https://example.com/twentytwentyone-child
+Description: Thème enfant pour Twenty Twenty-One
+Author: Ton Nom
+Author URI: https://example.com
+Template: twentytwentyone
+Version: 1.0.0
+*/
+
+/* --- Fonts --- */
+@font-face {
+    font-family: 'Space Mono';
+    src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Space Mono';
+    src: url('fonts/SpaceMono-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Space Mono';
+    src: url('fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+h1 {
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+h2 {
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+h3 {
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+/* --- Style de page --- */
+/* Style du header */
+
+body {
+    padding-top: 32px; /* Pour décaler le contenu sous la WP Admin Bar */
+}
+/* Container global du header */
+.site-entete  {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Container qui englobe le logo et le menu */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.site-logo {
+    width: 216px;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+.main-navigation {
+    flex: 3;
+    text-align: right;
+}
+
+.main-navigation .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox pour aligner les éléments */
+}
+
+.main-navigation .menu li {
+    margin-left: 30px; /* Espacement entre les liens */
+}
+
+.main-navigation .menu a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    background: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+
+
+
+
+/* Footer */
+/* Style pour le footer */
+.site-footer {
+    height: 40px; 
+    border-top: 1px solid #000000; 
+    margin: 0px !important;
+    padding-bottom: 10px !important;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+/* Centre le menu horizontalement et ajuste les marges */
+.footer-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0 !important;
+    height: 40px; 
+}
+
+.footer-navigation-wrapper {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-navigation-wrapper li {
+    margin: 0 22.5px; /* Marge entre les éléments : 45px / 2 */
+}
+
+.footer-navigation-wrapper a {
+    text-decoration: none !important;
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.7px;
+    padding: 0;
+    color: #000;
+}
+
+.site-main {
+    padding:0px !important;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    animation: fadeInBackground 0.5s forwards;
+}
+
+/* Animation pour faire apparaître le fond de la modale */
+@keyframes fadeInBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal Content/Box */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideIn 0.7s forwards;
+}
+
+/* Animation pour faire glisser la modale depuis la droite */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.modal-title {
+    font-size: 48px;
+    line-height: 1;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    animation: scrollContact 60s linear infinite;
+    font-style: italic;
+}
+
+/* Animation du texte qui défile en continue */
+@keyframes scrollContact {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.modal-title-wrapper {
+    width: 100%; 
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Formulaire */
+.label {
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.wpcf7-form-control-wrap input, textarea
+ {
+    border-radius: 8px !important;
+    border: 1px solid #B8BBC2 !important;
+    margin-bottom: 15px !important;
+}
+.submitbtn {
+    width: 100%;
+    background-color:#D8D8D8 !important;
+    border-radius: 8px !important;
+    border: 1px solid #B8BBC2 !important;
+    color:black !important;
+    font-family: space-mono !important;
+    font-weight: 400;
+}
+.submitbtn:hover {
+    background-color: #fefefe !important;
+    border: 1px solid #000000 !important;
+}
+
+/* --- SIngle-photo CSS --- */
+/* Container global */
+
+.single-photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    width: 100%;
+}
+
+.bloc-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Bloc gauche infos */
+.left-info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding: 20px 0;
+    border-bottom: 1px solid;
+}
+
+.left-info-block h2, .left-info-block p, .left-info-block a {
+    font-family: 'Space Mono', monospace !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.left-info-block h2 {
+    font-size: 66px;
+}
+
+.left-info-block p, .left-info-block a {
+    font-size: 14px;
+}
+
+/* Bloc droit photo */
+.right-photo-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.right-photo-block img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* -- Bloc du milieu -- */
+.middle-box {
+    height: 108px;
+    display: flex; 
+    align-items: center; 
+    width: 100%;
+    gap: 20px;
+    border-bottom: 1px solid;
+}
+
+.bottom-interactions-block p {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.bottom-interactions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+/* Colonne molieu gauche */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    font-size: 14px;
+}
+
+.contact-link a {
+    display: block;
+    width: 272px;
+    height: 50px;
+    padding: 8px 15px;
+    border-radius: 2px 0 0 0;
+    background-color: #D8D8D8;
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 34px;
+    text-decoration: none !important;
+}
+
+/* Colonne milieu droite */
+.navigation-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style général des liens de navigation */
+.nav-link {
+    position: relative;
+    font-size: 40px;
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Style général des miniatures */
+.nav-preview {
+    display: none;
+    position: absolute;
+    width: 81px;
+    height: 71px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Miniature pour le lien précédent */
+.prev-preview {
+    bottom: 50px; /* Miniature apparaît au-dessus de la flèche */
+}
+
+/* Miniature pour le lien suivant */
+.next-preview {
+    bottom: 50px; /* Miniature apparaît au-dessus de la flèche */
+    transform: translateX(-50%); /* Centrée par rapport à la flèche */
+}
+
+/* Affichage de la miniature au survol */
+.prev-link:hover .prev-preview,
+.next-link:hover .next-preview {
+    display: block;
+}
+
+/* Bottom box-photos apparentées et dans catalogue */
+.bottom-box {
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.bottom-box h3 {
+    font-family: 'Space Mono', monospace !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+/* Front page  */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 8vw; /* Taille dynamique */
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.2;
+    color: transparent;
+    -webkit-text-stroke: 3px #FFFFFF;
+    white-space: nowrap; 
+    overflow: hidden;
+}
+
+/* Catalogue Photo */
+.filter-container {
+    display: flex;                
+    justify-content: space-between; 
+    align-items: center;         
+}
+/* Styles généraux pour chaque filtre */
+.filter-container select {
+    border: 1.3px solid #B8BBC2;
+    font-family: 'Poppins', monospace;
+    font-weight: 500;
+    width: 260px;
+    padding: 11px 18px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none !important;
+    transition: none;
+    border-radius: 8px;
+}
+
+/* Style par défaut pour le conteneur des filtres */
+.filter-container select {
+    border: 1.3px solid #B8BBC2;
+    font-family: 'Space Mono', monospace;
+    width: 260px;
+    padding: 11px 18px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.3s ease;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+/* Masquer l'option par défaut dans la liste */
+.filter-container select option:first-child {
+    display: none;
+}
+
+/* Bordure et coins ajustés lors du focus  ATTENTION : pour mettre du rouge, il faut un code html div-spam et javascript, se rengseigner sur personnaliser selecter*/
+.filter-container select:focus {
+    border: 1.3px solid #215AFF;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* Style de base pour les options */
+.filter-container select option {
+    border: 1.3px solid #B8BBC2;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 8px 15px;
+}
+
+/* Positionnement des filtres */
+.filter-container select#category-filter {
+    margin-right: auto;
+}
+
+.filter-container select#format-filter {
+    margin-left: 30px;
+}
+
+.filter-container select#date-order {
+    margin-left: auto;
+}
+
+.photo-catalogue {
+    padding: 40px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 40px 0;
+}
+
+/* Styles de base pour le conteneur et l’image */
+.related-photo-block {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.related-photo-block img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Ajoutez le dégradé avec un pseudo-élément ::before */
+.related-photo-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.7) 0%,   /* Dégradé plus sombre en bas */
+        rgba(0, 0, 0, 0.3) 20%,  /* Dégradé plus atténué au milieu */
+        rgba(0, 0, 0, 0) 100%    /* Transparent en haut */
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Place le dégradé sous les icônes et le texte */
+}
+
+/* Icônes et informations qui apparaissent au survol */
+.related-photo-block .overlay-icon,
+.related-photo-block .photo-info {
+    position: absolute;
+    color: white;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Masqué par défaut */
+    z-index: 2;
+}
+
+/* Icône œil au centre */
+.related-photo-block .view-icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2em;
+    opacity: 0; /* Commence masqué */
+    transition: opacity 0.3s ease;
+}
+
+.related-photo-block:hover .view-icon {
+    opacity: 1; /* Affiche au survol */
+}
+
+/* Icône plein écran en haut à droite */
+.related-photo-block .fullscreen-icon {
+    top: 10px; 
+    right: 10px; 
+    font-size: 1.2em; 
+    width: 34px; 
+    height: 34px; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 5px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Informations de la photo en bas */
+.related-photo-block .photo-info {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 0.9em;
+    opacity: 0; /* Masqué par défaut */
+}
+
+.related-photo-block:hover .photo-info {
+    opacity: 1; /* Affiche au survol */
+}
+
+/* Afficher le dégradé au survol */
+.related-photo-block:hover::before {
+    opacity: 1; /* Affiche le dégradé lors du survol */
+}
+/* Ajout d'un dégradé en bas de l'image */
+.photo-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 10px;
+    color: white;
+    background: linear-gradient(to middle, rgba(0, 0, 0, 0) 0%, 100%); /* Dégradé plus sombre */
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+
+/* Affichage des éléments au survol de l'image */
+.related-photo-block:hover .overlay-icon,
+.related-photo-block:hover .photo-info {
+    opacity: 1;
+}
+
+
+
+/* Bouton Charger plus */
+.load-more-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Bouton Charger plus */
+.load-more-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#load-more {
+    width: 272px;
+    height: 50px;
+    padding: 8px 15px 8px 15px;
+    gap: 10px;
+    border-radius: 2px 0px 0px 0px;
+    opacity: 0px;
+    background-color: #D8D8D8;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+#load-more:hover {
+    background-color:#000000;
+    color: white;
+}
+
+#load-more:focus {
+    outline: none;
+}
+
+
+/* Lightbox principale */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Overlay noir transparent */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Pour être au-dessus de tout */
+    overflow: hidden; /* Empêche le débordement de contenu */
+}
+
+/* Bouton de fermeture (en haut à droite de l'écran) */
+.closelightbox {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    transition: color 0.3s;
+    z-index: 1001;
+    outline: none !important;
+}
+#closelightbox {
+    background-color: transparent !important;
+    color: white;
+}
+
+/* Flexbox qui contient l'image et les flèches (Précédente et Suivante) */
+.lightbox-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Place les éléments à gauche et à droite */
+    width: 100%;
+    position: relative;
+}
+
+/* Style commun pour tous les boutons de navigation */
+.nav-linklight {
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 10px 20px;
+    background: none !important;
+    outline: none !important;
+    border: none;
+    cursor: pointer;
+}
+
+/* Flèche de navigation précédente (à gauche) */
+#prev-linklight {
+    margin-left: 20px; /* Espace à gauche */
+    background-color: transparent !important;
+    color: white;
+}
+
+/* Flèche de navigation suivante (à droite) */
+#next-linklight {
+    margin-right: 20px; /* Espace à droite */
+    background-color: transparent !important;
+    color: white;
+}
+
+/* Conteneur de l'image */
+.image-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+#lightbox-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* Informations de la lightbox */
+.lightbox-info {
+    font-family: Space Mono;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Styles généraux pour tous les écrans */
+/* Très grand écran */
+@media only screen and (max-width:1475px) {
+    .right-photo-block {
+        width: 48%;
+    }
+}
+@media only screen and (max-width:940px) {
+    .filter-container select#format-filter {
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width:910px) {
+
+    .filter-container {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .filter-container select {
+        display: block;
+        margin-bottom: 10px; 
+        width: 270px;
+    }
+
+    .filter-container select#format-filter {
+        margin-left: 0px;
+    }
+}
+
+/* Optionnel : cacher le bouton de menu sur les grands écrans */
+@media only screen and (max-width: 800px) {
+    .bloc-top {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .right-photo-block {
+        width: 100%; 
+        flex-basis: 100%; 
+    }
+
+    .right-photo-block img {
+        width: 100%; 
+        height: auto; 
+    }
+
+
+    .middle-box{
+        flex-direction: column;
+        margin: 0;
+        padding: 15px 0 !important;
+        border-top: 1px solid;
+    }
+
+    .bottom-interactions-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation-links {
+        display: none;
+    }
+
+    .site-entete{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+    }
+    .menu-primary-menu-list a{
+        padding-top: 0px;
+    }
+    .menu-button-container {
+        display: none;
+    }
+    .footer-navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .primary-navig {
+        margin: auto;
+    }
+
+    .bottom-box h3 {
+        text-align: center;
+    }
+
+    .same-style-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .related-photo-block {
+        flex: 1 1 100%;
+        height: 278.8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .related-photo-block img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .left-info-block {
+        border-bottom: 0px;
+    }
+
+    .hero h1 {
+        font-size: 12vw; /* La taille du texte augmente sur écrans plus petits */
+        white-space: normal; /* Permet au texte de se diviser en plusieurs lignes si nécessaire */
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Cacher le menu principal sur les petits écrans */
+@media only screen and (max-width: 696px) {
+    .main-menu-class {
+    justify-content: center;
+    }
+    .site-entete {
+        flex-direction: row;
+    }
+}
+
+
+@media only screen and (max-width: 604px) {
+    .modal-content {
+        display: block;
+        background-color: #fefefe;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; 
+    }
+
+@media only screen and (max-width: 604px) {
+    .bloc-top img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+    .middle-box {
+        border-bottom: 1px solid;
+        height: 100%;
+        width: 100VW;
+    }
+
+}
+
+/* Petits appareils (téléphones en mode portrait, largeur max de 480px) */
+@media only screen and (max-width: 481px) {
+    .site-entete {
+        justify-content: flex-start !important;
+        align-items: normal !important;
+        margin: 0 25px !important;
+        height: 40px;
+    }
+
+    .logo-site {
+        height:15px;
+        padding: 0px !important;
+        display: flex !important;
+        position: absolute !important;
+    }
+    .logo-site img{
+        height: 9px !important;
+    }
+    .menu-button-container {
+        padding: 0px !important;
+        height: 40px;
+    }
+
+    .middle-box {
+        padding: 15px 0 !important;
+    }
+    .primary-menu-container {
+        display: flex;
+        background:#E00000 !important;
+        align-items: center;
+    }
+    .menu-wrapper a{
+        font-family: Space Mono;
+        font-size: 44px !important;
+        font-weight: 400 !important;
+        text-align: center;
+        color: white !important;
+        justify-content: center;
+    }
+
+}

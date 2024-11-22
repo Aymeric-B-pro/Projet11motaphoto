@@ -1,37 +1,44 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log("DOM chargé et script prêt à s'exécuter.");
 
-    // Sélectionner tous les éléments qui déclenchent la lightbox
-    const imageLinks = document.querySelectorAll('.lightbox-trigger');
-    console.log("Nombre de liens d'image trouvés :", imageLinks.length);
+    // Fonction pour récupérer toutes les URLs d'image
+    function getAllImageUrls() {
+        const imageLinks = document.querySelectorAll('.lightbox-trigger');
+        const images = [];
 
-    if (imageLinks.length === 0) {
-        console.warn("Aucun lien d'image trouvé. Vérifiez que les sélecteurs de liens sont corrects.");
-        return;
+        imageLinks.forEach(link => {
+            const photoUrl = link.getAttribute('data-photo-url');
+            if (photoUrl) {
+                images.push(photoUrl);
+            }
+        });
+
+        console.log("Tableau des URLs d'image :", images);
+        return images;
     }
 
-    // Créer un tableau pour stocker les URLs des images
-    const images = [];
+    // Initialisation des URLs d'image et de l'index actuel
+    let images = getAllImageUrls();
+    let currentIndex = -1;
 
-    // Itérer sur chaque élément pour ajouter les URLs dans le tableau
-    imageLinks.forEach(link => {
-        const photoUrl = link.getAttribute('data-photo-url');
-        if (photoUrl) {
-            images.push(photoUrl);
+    // Utiliser Event Delegation pour écouter les clics sur le document
+    document.addEventListener('click', function(event) {
+        const link = event.target.closest('.lightbox-trigger');
+        if (!link) return; // Si l'élément cliqué n'est pas un déclencheur de lightbox, on ignore
+
+        event.preventDefault();
+        images = getAllImageUrls(); // Mettre à jour la liste des images
+        currentIndex = Array.from(document.querySelectorAll('.lightbox-trigger')).indexOf(link);
+
+        if (currentIndex === -1) {
+            console.error("Index de l'image cliquée non trouvé.");
+            return;
         }
-    });
 
-    console.log("Tableau des URLs d'image :", images);
+        console.log(`Image cliquée : Index ${currentIndex}, URL : ${images[currentIndex]}`);
 
-    // Ajouter un événement de clic à chaque élément pour ouvrir la lightbox
-    imageLinks.forEach((link, index) => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            console.log(`Image cliquée : Index ${index}, URL : ${images[index]}`);
-
-            // Appeler la fonction pour ouvrir la lightbox avec l'URL de l'image
-            openLightbox(images[index], link.getAttribute('data-photo-title'), link.getAttribute('data-photo-category'));
-        });
+        // Ouvrir la lightbox avec l'image correspondante
+        openLightbox(images[currentIndex], link.getAttribute('data-photo-title'), link.getAttribute('data-photo-category'));
     });
 
     // Fonction pour ouvrir la lightbox
@@ -53,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Lightbox ouverte avec l'image :", photoUrl);
     }
 
-    // Fermer la lightbox
+    // Gestion de la fermeture de la lightbox
     const closeBtn = document.querySelector('.closelightbox');
     if (closeBtn) {
         closeBtn.addEventListener('click', function() {
@@ -65,5 +72,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } else {
         console.error("Le bouton de fermeture .closelightbox n'a pas été trouvé.");
+    }
+
+    // Fonction pour gérer la navigation "Suivant"
+    function goToNextImage() {
+        if (currentIndex >= 0) {
+            currentIndex = (currentIndex + 1) % images.length; // Passe à l'image suivante
+            updateLightboxWithImage(currentIndex);
+            console.log("Navigué vers l'image suivante : Index", currentIndex);
+        }
+    }
+
+    // Fonction pour gérer la navigation "Précédent"
+    function goToPreviousImage() {
+        if (currentIndex >= 0) {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Passe à l'image précédente
+            updateLightboxWithImage(currentIndex);
+            console.log("Navigué vers l'image précédente : Index", currentIndex);
+        }
+    }
+
+    // Mettre à jour la lightbox avec les informations de l'image correspondante
+    function updateLightboxWithImage(index) {
+        const photoUrl = images[index];
+        const link = document.querySelectorAll('.lightbox-trigger')[index];
+        const photoTitle = link ? link.getAttribute('data-photo-title') : "Référence non disponible";
+        const photoCategory = link ? link.getAttribute('data-photo-category') : "Catégorie non disponible";
+
+        // Ouvrir la lightbox avec les bonnes informations
+        openLightbox(photoUrl, photoTitle, photoCategory);
+    }
+
+    // Gestion de la navigation "Suivant"
+    const nextBtn = document.getElementById('next-linklight');
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            goToNextImage();
+        });
+    } else {
+        console.error("Le bouton 'Suivant' n'a pas été trouvé.");
+    }
+
+    // Gestion de la navigation "Précédent"
+    const prevBtn = document.getElementById('prev-linklight');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            goToPreviousImage();
+        });
+    } else {
+        console.error("Le bouton 'Précédent' n'a pas été trouvé.");
     }
 });

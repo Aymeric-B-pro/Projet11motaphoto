@@ -38,16 +38,17 @@
     <?php else : ?>
         <p style="color: red;">No footer menu assigned</p>
     <?php endif; ?>
-<!-- Lightbox structure -->
-<div id="lightbox" class="lightbox" style="display: none;">
-    <div class="lightbox-content">
-        <!-- Bouton de fermeture -->
-        <button class="closelightbox">&times;</button>
+    <!-- Lightbox structure -->
+    <div id="lightbox" class="lightbox" style="display: none;">
+        <!-- Bouton de fermeture en haut à droite -->
+        <button class="closelightbox" id="closelightbox">&times;</button>
+
         <!-- Flexbox contenant les flèches et l'image -->
         <div class="lightbox-flex-container">
+            <!-- Flèche de navigation précédente (à gauche) -->
+            <button class="nav-linklight prev-linklight" id="prev-linklight">&larr; Précédente</button>
 
-            <!-- Flèche de navigation précédente -->
-            <button class="nav-linklight prev-linklight" id="prev-linklight">&larr; <p>Précédente</p></button>
+            <!-- Conteneur de l'image -->
             <div class="image-info-container">
                 <!-- Image de la lightbox -->
                 <img src="" id="lightbox-image" alt="Lightbox Image">
@@ -59,13 +60,10 @@
                 </div>
             </div>
 
-            <!-- Flèche de navigation suivante -->
-            <button class="nav-linklight next-linklight" id="next-linklight"><p>Suivante</p> &rarr;</button>
+            <!-- Flèche de navigation suivante (à droite) -->
+            <button class="nav-linklight next-linklight" id="next-linklight">Suivante &rarr;</button>
         </div>
     </div>
-</div>
-
-
 <?php wp_footer(); ?>
 <?php get_template_part('template_parts/modal-contact'); ?>
 </footer><!-- #colophon -->

@@ -2,13 +2,27 @@
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles() {
+    
+    // Charger le fichier style.css du parent depuis la racine
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_script(
+        'primary-navigation',
+        get_template_directory_uri() . '/assets/js/primary-navigation.js',
+        array( 'jquery' ), // Ajouter d'autres dépendances si nécessaire
+        wp_get_theme()->get( 'Version' ),
+        true // Charger en pied de page
+    );
+    // Charger le style du thème enfant
     wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'), filemtime(get_stylesheet_directory() . '/style.css'));
+
+    // Charger les scripts du thème enfant
     wp_enqueue_script('child-theme-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
     wp_localize_script('child-theme-scripts', 'child_style_js', array(
         'ajax_url' => admin_url('admin-ajax.php')
     ));
 }
+
+
 
 function enqueue_font_awesome() {
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
@@ -27,6 +41,7 @@ function register_my_menus() {
     ));
 }
 add_action( 'after_setup_theme', 'register_my_menus' );
+
 function motaphoto_request_photos() {
     $args = array(
         'post_type'      => 'photo',
@@ -174,3 +189,4 @@ function filter_photos() {
 }
 
 add_action('wp_ajax_filter_photos', 'filter_photos');
+?>

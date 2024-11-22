@@ -75,6 +75,21 @@ p {
     margin: 0 50px !important;
     padding: 0px !important;
     max-width: 100% !important;
+
+}
+
+.primary-navigation a{
+    background: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+    font-family: 'Space Mono', sans-serif !important;
+    font-weight: 400;
+    font-size: 16px;
+}
+.button {
+    background: none !important;
+    outline: none !important;
+    text-decoration: none !important;
 }
 
 /* Style du logo */
@@ -83,7 +98,9 @@ p {
     height: auto;
     padding-bottom: 5px;
 }
-
+.site-logo {
+    margin-top: 0px !important;
+}
 /* Style du menu principal */
 .main-navigation {
     flex-grow: 1;
@@ -111,7 +128,16 @@ p {
     color: #000;
 }
 
-
+#main-menu-list a {
+    text-decoration: none;
+    list-style: none;
+    background: none; 
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.66px;
+    color: #000;
+}
 
 /* Footer */
 /* Style pour le footer */
@@ -157,6 +183,9 @@ p {
     color: #000;
 }
 
+.site-main {
+    padding:0px !important;
+}
 
 /* The Modal (background) */
 .modal {
@@ -707,7 +736,6 @@ p {
 .lightbox {
     display: none;
     position: fixed;
-    flex-direction: column;
     top: 0;
     left: 0;
     width: 100%;
@@ -719,38 +747,68 @@ p {
     overflow: hidden; /* Empêche le débordement de contenu */
 }
 
-/* Contenu de la lightbox */
-.lightbox-content {
+/* Bouton de fermeture (en haut à droite de l'écran) */
+.closelightbox {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    transition: color 0.3s;
+    z-index: 1001;
+    outline: none !important;
+}
+#closelightbox {
+    background-color: transparent !important;
+    color: white;
+}
+
+/* Flexbox qui contient l'image et les flèches (Précédente et Suivante) */
+.lightbox-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Place les éléments à gauche et à droite */
+    width: 100%;
     position: relative;
-    max-width: 100%;
-    max-height: 100%;
+}
+
+/* Style commun pour tous les boutons de navigation */
+.nav-linklight {
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 10px 20px;
+    background: none !important;
+    outline: none !important;
+    border: none;
+    cursor: pointer;
+}
+
+/* Flèche de navigation précédente (à gauche) */
+#prev-linklight {
+    margin-left: 20px; /* Espace à gauche */
+    background-color: transparent !important;
+    color: white;
+}
+
+/* Flèche de navigation suivante (à droite) */
+#next-linklight {
+    margin-right: 20px; /* Espace à droite */
+    background-color: transparent !important;
+    color: white;
+}
+
+/* Conteneur de l'image */
+.image-info-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
-    overflow: hidden;
-    text-align: center;
-}
-
-/* Bouton de fermeture */
-.closelightbox {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s;
-    margin-left: auto;
-    z-index: 1001;
-}
-
-/* Flexbox qui contient les flèches et l'image */
-.lightbox-flex-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 100%; /* Pour limiter la largeur globale */
-    margin: auto; /* Centrer horizontalement */
+    max-width: 100%;
 }
 
 #lightbox-image {
@@ -759,6 +817,7 @@ p {
     object-fit: contain;
 }
 
+/* Informations de la lightbox */
 .lightbox-info {
     font-family: Space Mono;
     font-weight: 400;
@@ -768,40 +827,10 @@ p {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 100%; /* Empêche de dépasser la largeur de l'image */
+    max-width: 100%;
     box-sizing: border-box;
 }
 
-/* Styles pour les liens de navigation (flèches) */
-.nav-linklight {
-    display: flex;
-    align-items: center;
-    font-family: Space Mono;
-    font-weight: 400;
-    font-size: 12px;
-    color: white;
-    text-decoration: none;
-    padding: 20px; /* Ajustez selon vos besoins */
-    cursor: pointer;
-    gap: 8px; /* Ajoute un espace de 8px entre le texte et la flèche */
-}
-
-.prev-linklight {
-    padding-right: auto;
-    flex-direction: row-reverse; /* Inverse l'ordre : texte suivi de la flèche */
-    text-decoration: none !important;
-}
-
-.next-linklight {
-    padding-left: auto;
-    text-decoration: none !important;
-}
-
-.nav-linklight:focus,
-.nav-linklight:active {
-    outline: none !important; /* Retirer le contour bleu ou foncé */
-    box-shadow: none !important; /* Retirer les ombres ou effets après clic */
-}
 
 /* Styles généraux pour tous les écrans */
 /* Très grand écran */
@@ -832,13 +861,16 @@ p {
     .filter-container select#format-filter {
         margin-left: 0px;
     }
+    .lightbox-flex-container {
+        flex-direction: column;
+    }
 }
 
 /* Optionnel : cacher le bouton de menu sur les grands écrans */
 @media only screen and (max-width: 800px) {
     .bloc-top {
-    flex-direction: column-reverse;
-    align-items: center;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
     .right-photo-block {
@@ -874,6 +906,9 @@ p {
         align-items: center;
         height: auto;
     }
+    .menu-primary-menu-list a{
+        padding-top: 0px;
+    }
     .menu-button-container {
         display: none;
     }
@@ -886,7 +921,6 @@ p {
     .primary-navigation {
         margin: auto;
     }
-
     .bottom-box h3 {
         text-align: center;
     }
@@ -962,34 +996,6 @@ p {
         width: 100VW;
     }
 
-    .main-menu-class {
-        display: none;
-    }
-        
-    .menu-button-container {
-        display: flex !important;
-        padding: 0 30px 0 0 !important;
-        position: fixed !important;
-    }
-        
-    .primary-menu-container {
-        display: none;
-    }
-        
-    .primary-menu-container.active {
-        display: block;
-        background-color: #E00000;
-    }
-    .primary-navigation {
-        position: static;
-    }
-    .site-header {
-        justify-content: space-between;
-        align-items: normal !important;
-    }
-    .logo a img{
-        padding: 0px !important;
-    }
 }
 
 /* Petits appareils (téléphones en mode portrait, largeur max de 480px) */
@@ -997,14 +1003,40 @@ p {
     .site-header {
         justify-content: flex-start !important;
         align-items: normal !important;
-        margin: 0 15px !important;
+        margin: 0 25px !important;
+        height: 40px;
+    }
+
+    .site-logo {
+        height:15px;
+        padding: 0px !important;
+        display: flex !important;
+        position: absolute !important;
+        margin-top: 0px !important;
+    }
+    .site-logo img{
+        height: 9px !important;
     }
     .menu-button-container {
         padding: 0px !important;
+        height: 40px;
     }
 
     .middle-box {
         padding: 15px 0 !important;
+    }
+    .primary-menu-container {
+        display: flex;
+        background:#E00000 !important;
+        align-items: center;
+    }
+    .menu-wrapper a{
+        font-family: Space Mono;
+        font-size: 44px !important;
+        font-weight: 400 !important;
+        text-align: center;
+        color: white !important;
+        justify-content: center;
     }
 
 }

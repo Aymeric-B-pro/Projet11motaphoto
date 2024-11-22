@@ -67,23 +67,44 @@ p {
 
 /* --- Style de page --- */
 /* Style du header */
-.site-header {
+.site-entete {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    margin: 0 50px !important;
-    padding: 0px !important;
-    max-width: 100% !important;
+    margin: 0 50px;
+    padding: 0px;
+    max-width: 100%;
 }
 
-/* Style du logo */
-.logo a img {
+/* Logo du site */
+.site-logo img {
     width: 216px;
     height: auto;
     padding-bottom: 5px;
 }
 
+/* Menu de navigation */
+.main-navigation .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox pour aligner les éléments */
+}
+
+.main-navigation .menu li {
+    margin-left: 30px; /* Espacement entre les liens */
+}
+
+.main-navigation .menu a {
+    text-decoration: none; /* Supprime les soulignements des liens */
+    color: #333; /* Couleur des liens */
+    font-size: 16px; /* Taille de police des liens */
+}
+
+.main-navigation .menu a:hover {
+    color: #0073aa; /* Couleur au survol */
+}
 /* Style du menu principal */
 .main-navigation {
     flex-grow: 1;
@@ -110,6 +131,17 @@ p {
     line-height: 26.66px;
     color: #000;
 }
+
+
+
+
+/* Style du logo */
+.logo a img {
+    width: 216px;
+    height: auto;
+    padding-bottom: 5px;
+}
+
 
 
 
